@@ -1,6 +1,8 @@
 # async_lorentz.py
 import asyncio
+import pandas as pd
 from time import perf_counter
+import tracemalloc
 
 async def async_lorentzian_histogram(n, bins=100, xmin=-10, xmax=10):
     """
@@ -45,31 +47,37 @@ def run_async(n, n_tasks=4, bins=100, xmin=-10, xmax=10, n_subchunks=10):
     """
     return asyncio.run(get_counts(n, n_tasks, bins, xmin, xmax, n_subchunks))
 
-
-
 # Initialize the parser
 parser = argparse.ArgumentParser()
 
 # Add arguments to the parser
 parser.add_argument('n', type=int)
 parser.add_argument('bins', type=int)
-parser.add_argument('n_eigs', type=int)
+parser.add_argument('nP', type=int)
+parser.add_argument('nodes', type=int)
+parset.add_argument('fNameOut', type=str)
+parset.add_argument('fNameCounts', type=str)
 
 # Get the input arguments
 args = vars(parser.parse_args())	
 
-start = perf_counter()
+tracemalloc.start() # Start monitoring memory
+start = perf_counter() # Start timer
 
 counts = run_aync(args['n'], bins=args['bins'])
 
+end = perf_counter() # Stop timer
+tracemalloc.stop() # Stop monitoring memory
 
+t = end - start # Calculate time
 
-end = perf_counter()
+df = pd.read_excel(args['fNameOut']) # Read in catalog
 
-t = end - start
+# Add entry to catalog
+df.loc[-1] = [args['n'], args['bins'], args['nodes'], args['nP'], args['nP']/args['nodes'], t, tracemalloc.get_traced_memory()[1]]
 
-# Run the eigenvalue solver
-vals, vecs = solve_eigen(N=args['N'], potential=args['potential'], n_eigs=args['n_eigs'])
-np.savetxt(f'./output/eigs_N{args['N']}.txt', vals)
-print("Lowest 5 eigenvalues:", vals)
+# Write to the catalog
+df.to_excel(args['fNameOut'], columns=["Problem Size (n)", "Bins", "Nodes", "Ranks", "Threads", "Threads Per Rank", "Runtime", "Peak Memory"])
 
+# Save the counts to a .txt file
+np.savetxt(args['fNameCounts'], np.array(counts))
