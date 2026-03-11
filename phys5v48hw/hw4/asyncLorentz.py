@@ -1,6 +1,7 @@
 # async_lorentz.py
 import argparse
 import asyncio
+import numpy as np
 import pandas as pd
 from time import perf_counter
 import tracemalloc
@@ -65,7 +66,7 @@ args = vars(parser.parse_args())
 tracemalloc.start() # Start monitoring memory
 start = perf_counter() # Start timer
 
-counts = run_aync(args['n'], bins=args['bins'])
+counts = run_async(args['n'], bins=args['bins'])
 
 end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory

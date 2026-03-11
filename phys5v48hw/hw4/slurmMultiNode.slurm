@@ -18,11 +18,11 @@ n=100000000
 nodes=2
 baseName="asyncLorentz"
 
-for ((nP=1; nP<100; nP*=2)); do
+for ((nP=1; nP<17; nP*=2)); do
 for ((bins=10; bins<1001; bins*=10)); do
 
 	fNameCounts = "${baseName}CountsNP${nP}B${bins}.txt"
-	srun -n "$nP" python "${baseName}.py" --n "$n" --bins "$bins" --np "$nP" --nodes "$nodes" --fNameOut "${baseName}Cat.xlsx" --fNameCounts "$fNameCounts"
+	srun -n "$nP" python "${baseName}.py" "$n" "$bins" "$nP" "$nodes" "${baseName}Cat.xlsx" "$fNameCounts"
 
 done
 done
