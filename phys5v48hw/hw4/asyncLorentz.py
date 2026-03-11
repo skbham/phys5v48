@@ -56,8 +56,8 @@ parser.add_argument('n', type=int)
 parser.add_argument('bins', type=int)
 parser.add_argument('nP', type=int)
 parser.add_argument('nodes', type=int)
-parset.add_argument('fNameOut', type=str)
-parset.add_argument('fNameCounts', type=str)
+parser.add_argument('fNameOut', type=str)
+parser.add_argument('fNameCounts', type=str)
 
 # Get the input arguments
 args = vars(parser.parse_args())	
