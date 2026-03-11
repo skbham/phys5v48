@@ -2,6 +2,7 @@
 import argparse
 import asyncio
 import numpy as np
+import os
 import pandas as pd
 from time import perf_counter
 import tracemalloc
@@ -83,6 +84,9 @@ end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory
 
 t = end - start # Calculate time
+
+if not os.path.exists(args['fNameOut']):
+    file = open(args['fNameOut'], 'w')
 
 df = pd.read_excel(args['fNameOut']) # Read in catalog
 
