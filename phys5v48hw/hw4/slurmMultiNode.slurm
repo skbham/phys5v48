@@ -1,6 +1,7 @@
 #!/bin/bash
-#SBATCH -J hw4-lorentz
-#SBATCH -A your_account
+#SBATCH -J hw4Async
+#SBATCH -A acc1
+#SBATCH --output=hw4AsyncOut.txt
 #SBATCH -p compute
 #SBATCH -N 2 # nodes
 #SBATCH -n 16 # total ranks
