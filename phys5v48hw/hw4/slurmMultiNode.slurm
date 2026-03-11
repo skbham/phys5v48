@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH -J hw4Async
-#SBATCH -A acc1
 #SBATCH --output=hw4AsyncOut.txt
 #SBATCH -p cpu-preempt
 #SBATCH -N 2 # nodes
