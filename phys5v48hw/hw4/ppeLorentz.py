@@ -47,3 +47,4 @@ df.to_excel(args['fNameOut'], columns=["Problem Size (n)", "Bins", "Nodes", "Ran
 
 # Save the counts to a .txt file
 np.savetxt(args['fNameCounts'], np.array(counts))
+
