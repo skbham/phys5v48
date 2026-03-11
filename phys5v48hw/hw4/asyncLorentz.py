@@ -13,6 +13,17 @@ async def async_lorentzian_histogram(n, bins=100, xmin=-10, xmax=10):
     """
     return lorentzian_histogram(n, bins, xmin, xmax)
 
+def lorentzian_histogram(n, bins=100, xmin=-10, xmax=10):
+    """
+    Sample n random points from the Lorentzian distribution
+    using inverse transform sampling. Make a histogram with
+    the specified bin count and range. Returns counts.
+    """
+    u = np.random.random(n) # Uniform(0,1)
+    x = 1. / np.tan(np.pi * u) # x = 1/tan(pi*u)
+    counts, _ = np.histogram(x, bins=bins, range=(xmin, xmax))
+    return counts # No need to return bin edges for uniform bins
+
 async def add_chunk(n, counts, bins=100, xmin=-10, xmax=10, n_subchunks=10):
     """
     Generate n samples in subchunks and add to global counts.
