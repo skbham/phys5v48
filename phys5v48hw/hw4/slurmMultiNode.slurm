@@ -2,7 +2,7 @@
 #SBATCH -J hw4Async
 #SBATCH -A acc1
 #SBATCH --output=hw4AsyncOut.txt
-#SBATCH -p compute
+#SBATCH -p cpu-preempt
 #SBATCH -N 2 # nodes
 #SBATCH -n 16 # total ranks
 #SBATCH -c 1 # CPUs per rank
