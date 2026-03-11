@@ -1,4 +1,5 @@
 # async_lorentz.py
+import argparse
 import asyncio
 import pandas as pd
 from time import perf_counter
