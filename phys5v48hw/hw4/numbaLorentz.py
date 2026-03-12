@@ -1,7 +1,13 @@
 # numba_lorentz.py
-import numpy as np
 from numba import njit, prange, atomic
+
+import argparse
+import asyncio
+import numpy as np
+import os
+import pandas as pd
 from time import perf_counter
+import tracemalloc
 
 @njit(parallel=True, nogil=True)
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
@@ -28,8 +34,8 @@ parser.add_argument('n', type=int)
 parser.add_argument('bins', type=int)
 parser.add_argument('nP', type=int)
 parser.add_argument('nodes', type=int)
-parset.add_argument('fNameOut', type=str)
-parset.add_argument('fNameCounts', type=str)
+parser.add_argument('fNameOut', type=str)
+parser.add_argument('fNameCounts', type=str)
 
 # Get the input arguments
 args = vars(parser.parse_args())	
@@ -43,6 +49,10 @@ end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory
 
 t = end - start # Calculate time
+
+if not os.path.exists(args['fNameOut']):
+    file = open(args['fNameOut'], 'w')
+    file.close()
 
 df = pd.read_excel(args['fNameOut']) # Read in catalog
 
