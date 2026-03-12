@@ -87,6 +87,7 @@ t = end - start # Calculate time
 
 if not os.path.exists(args['fNameOut']):
     file = open(args['fNameOut'], 'w')
+    file.close()
 
 df = pd.read_excel(args['fNameOut']) # Read in catalog
 
@@ -98,3 +99,5 @@ df.to_excel(args['fNameOut'], columns=["Problem Size (n)", "Bins", "Nodes", "Ran
 
 # Save the counts to a .txt file
 np.savetxt(args['fNameCounts'], np.array(counts))
+
+
