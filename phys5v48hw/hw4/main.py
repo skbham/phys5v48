@@ -10,7 +10,6 @@ import tracemalloc
 import resource
 
 # import custom modules
-
 import asyncLorentz # Import the set of functions
 
 # Initialize the parser

@@ -19,7 +19,6 @@ nodes=2
 baseName="asyncLorentz"
 fNameCat="output/${baseName}/${baseName}Cat.xlsx"
 
-
 for ((nP=1; nP<17; nP*=2)); do
 for ((bins=10; bins<1001; bins*=10)); do
 
