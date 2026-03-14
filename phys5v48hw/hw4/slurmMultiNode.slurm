@@ -17,14 +17,15 @@ export MKL_NUM_THREADS=1
 n=100000000
 nodes=2
 baseName="asyncLorentz"
+fNameCat="output/${baseName}/${baseName}Cat.xlsx"
+
 
 for ((nP=1; nP<17; nP*=2)); do
 for ((bins=10; bins<1001; bins*=10)); do
 
-	fNameCounts = "${baseName}CountsNP${nP}B${bins}.txt"
-	
-	python "${baseName}.py" "$n" "$bins" "$nP" "$nodes" "output/${baseName}Cat.xlsx" "output/${baseName}CountsNP${nP}Bins${bins}.txt"
+	fNameCounts="output/${baseName}/${baseName}CountsNP${nP}B${bins}.txt"
+
+	python "main.py" "$n" "$bins" "$nP" "$nodes" "$fNameCat" "$fNameCounts"
 
 done
 done
-
