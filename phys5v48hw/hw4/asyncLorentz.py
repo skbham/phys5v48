@@ -2,6 +2,7 @@
 import argparse
 import asyncio
 import numpy as np
+import openpyxl
 import os
 import pandas as pd
 from time import perf_counter
@@ -85,17 +86,18 @@ tracemalloc.stop() # Stop monitoring memory
 
 t = end - start # Calculate time
 
-if not os.path.exists(args['fNameOut']):
-    file = open(args['fNameOut'], 'w')
-    file.close()
+colList = ["Problem Size (n)", "Bins", "Nodes", "Ranks", "Threads", "Threads Per Rank", "Runtime", "Peak Memory"]
 
-df = pd.read_excel(args['fNameOut']) # Read in catalog
+writer = pd.ExcelWriter(args['fNameOut'], engine='openpyxl', mode='a')
+df = pd.read_excel(writer, index_col=0) # Read in catalog
 
 # Add entry to catalog
-df.loc[-1] = [args['n'], args['bins'], args['nodes'], args['nP'], args['nP']/args['nodes'], t, tracemalloc.get_traced_memory()[1]]
+newRow = [args['n'], args['bins'], args['nodes'], args['nP'], 0, args['nP']/args['nodes'], t, tracemalloc.get_traced_memory()[1]]
+
+df.loc[len(df)] = newRow
 
 # Write to the catalog
-df.to_excel(args['fNameOut'], columns=["Problem Size (n)", "Bins", "Nodes", "Ranks", "Threads", "Threads Per Rank", "Runtime", "Peak Memory"])
+df.to_excel(excel_writer=args['fNameOut'], columns=colList, engine='openpyxl')
 
 # Save the counts to a .txt file
 np.savetxt(args['fNameCounts'], np.array(counts))

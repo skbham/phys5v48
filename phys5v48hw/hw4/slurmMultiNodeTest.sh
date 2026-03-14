@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH -J hw4Async
-#SBATCH --output=hw4AsyncOut.txt
-#SBATCH -p cpu-preempt
-#SBATCH -N 2 # nodes
-#SBATCH -n 16 # total ranks
-#SBATCH -c 1 # CPUs per rank
-#SBATCH -t 00:10:00 # walltime
-#SBATCH --exclusive # avoid interference
+# SBATCH -J hw4Async
+# SBATCH --output=hw4AsyncOut.txt
+# SBATCH -p cpu-preempt
+# SBATCH -N 2 # nodes
+# SBATCH -n 16 # total ranks
+# SBATCH -c 1 # CPUs per rank
+# SBATCH -t 00:10:00 # walltime
+# SBATCH --exclusive # avoid interference
 module purge
 module load python mpi
 
@@ -14,7 +14,9 @@ module load python mpi
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 
-n=100000000
+source /home/biscuit/Documents/utd/phys5v48/venv/bin/activate
+
+n=1000
 nodes=2
 baseName="asyncLorentz"
 
@@ -27,4 +29,5 @@ for ((bins=10; bins<1001; bins*=10)); do
 
 done
 done
+
 
