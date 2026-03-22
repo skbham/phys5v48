@@ -24,7 +24,7 @@ for ((bins=10; bins<1001; bins*=10)); do
 
 	fNameCounts="output/${baseName}/${baseName}CountsNP${nP}B${bins}.txt"
 
-	srun -n "$nP" python "main.py" "$n" "$bins" "$nP" "$nodes" "$fNameCat" "$fNameCounts"
+	python "main.py" "$n" "$bins" "$nP" "$nodes" "$fNameCat" "$fNameCounts"
 
 done
 done
