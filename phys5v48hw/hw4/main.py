@@ -29,7 +29,7 @@ args = vars(parser.parse_args())
 tracemalloc.start() # Start monitoring memory
 start = perf_counter() # Start timer
 
-counts = asyncLorentz.run_async(args['n'], n_tasks=args['nP'], bins=args['bins'])
+counts = asyncLorentz.run_async(args['n'], n_tasks=args['nP'], bins=args['bins'], n_subchunks=10)
 
 end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory
@@ -45,7 +45,7 @@ df = pd.read_excel(writer, index_col=0) # Read in catalog
 
 #peakMem = tracemalloc.get_traced_memory()[1]
 peakMem = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-newRow = [args['n'], args['bins'], args['nodes'], args['nP'], args['nP']/args['nodes'], t, peakMem]
+newRow = [args['n'], args['bins'], args['nodes'], args['nP'], 10, t, peakMem]
 
 df.loc[len(df)] = newRow
 
