@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J hw4Async
-#SBATCH --output=hw4AsyncOut.txt
+#SBATCH -J hw4Thread
+#SBATCH --output=hw4ThreadOut.txt
 #SBATCH -p cpu-preempt
 #SBATCH -N 2 # nodes
 #SBATCH -n 16 # total ranks
