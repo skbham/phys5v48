@@ -1,13 +1,9 @@
 # thread_lorentz.py
-import threading
 
-import argparse
-import asyncio
+import threading
 import numpy as np
-import os
 import pandas as pd
 from time import perf_counter
-import tracemalloc
 
 # import custom modules
 import invTransSamp # Import the set of functions

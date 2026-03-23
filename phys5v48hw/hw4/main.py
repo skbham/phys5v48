@@ -30,8 +30,8 @@ args = vars(parser.parse_args())
 tracemalloc.start() # Start monitoring memory
 start = perf_counter() # Start timer
 
-#counts = asyncLorentz.run_async(args['n'], n_tasks=args['nP'], bins=args['bins'], n_subchunks=10)
-counts = threadLorentz.run_threaded(args['n'], n_threads=args['nP'], bins=args['bins'])
+#counts = asyncLorentz.run_async(args['n'], n_tasks=args['nP'], bins=args['bins'], n_subchunks=10) # AsyncIO
+counts = threadLorentz.run_threaded(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
 
 end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory
