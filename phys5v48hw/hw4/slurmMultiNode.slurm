@@ -16,7 +16,10 @@ export MKL_NUM_THREADS=1
 
 n=100000000
 nodes=2
-baseName="asyncLorentz"
+
+# baseName="asyncLorentz" # AsyncIO
+baseName="threadLorentz" # Threading
+
 fNameCat="output/${baseName}/${baseName}Cat.xlsx"
 
 for ((nP=1; nP<10000; nP*=2)); do

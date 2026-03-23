@@ -11,6 +11,7 @@ import resource
 
 # import custom modules
 import asyncLorentz # Import the set of functions
+import threadLorentz
 
 # Initialize the parser
 parser = argparse.ArgumentParser()
@@ -29,7 +30,8 @@ args = vars(parser.parse_args())
 tracemalloc.start() # Start monitoring memory
 start = perf_counter() # Start timer
 
-counts = asyncLorentz.run_async(args['n'], n_tasks=args['nP'], bins=args['bins'], n_subchunks=10)
+#counts = asyncLorentz.run_async(args['n'], n_tasks=args['nP'], bins=args['bins'], n_subchunks=10)
+counts = threadLorentz.run_async(args['n'], n_threads=args['nP'], bins=args['bins'])
 
 end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory
@@ -45,7 +47,9 @@ df = pd.read_excel(writer, index_col=0) # Read in catalog
 
 #peakMem = tracemalloc.get_traced_memory()[1]
 peakMem = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-newRow = [args['n'], args['bins'], args['nodes'], args['nP'], 10, t, peakMem]
+
+# newRow = [args['n'], args['bins'], args['nodes'], args['nP'], 10, t, peakMem] # AsyncIO
+newRow = [args['n'], args['bins'], args['nodes'], args['nP'], 1, t, peakMem] # Threading
 
 df.loc[len(df)] = newRow
 
