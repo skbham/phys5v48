@@ -42,6 +42,7 @@ colList = ["Problem Size (n)", "Bins", "Nodes", "Ranks", "Threads Per Rank", "Ru
 
 writer = pd.ExcelWriter(args['fNameOut'], engine='openpyxl', mode='a')
 df = pd.read_excel(writer, index_col=0) # Read in catalog
+print(df)
 
 # Add entry to catalog
 
