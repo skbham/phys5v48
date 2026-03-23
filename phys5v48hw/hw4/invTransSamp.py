@@ -1,6 +1,8 @@
 
 # Inverse Transform Smapling (Lorentzian)
 
+import numpy as np
+
 def lorentzian_histogram(n, bins=100, xmin=-10, xmax=10):
     """
     Sample n random points from the Lorentzian distribution
