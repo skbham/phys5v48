@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J hw4Thread
-#SBATCH --output=hw4ThreadOut.txt
+#SBATCH -J hw4MP
+#SBATCH --output=hw4MPOut.txt
 #SBATCH -p cpu-preempt
 #SBATCH -N 2 # nodes
 #SBATCH -n 16 # total ranks
@@ -18,7 +18,8 @@ n=100000000
 nodes=2
 
 # baseName="asyncLorentz" # AsyncIO
-baseName="threadLorentz" # Threading
+# baseName="threadLorentz" # Threading
+baseName="mpLorentz" # Multiprocessing
 
 fNameCat="output/${baseName}/${baseName}Cat.xlsx"
 
