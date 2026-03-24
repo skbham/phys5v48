@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J hw4Dask
-#SBATCH --output=hw4DaskOut.txt
+#SBATCH -J hw4Joblib
+#SBATCH --output=hw4JoblibOut.txt
 #SBATCH -p cpu-preempt
 #SBATCH -N 2 # nodes
 #SBATCH -n 16 # total ranks
@@ -21,7 +21,8 @@ nodes=2
 # baseName="threadLorentz" # Threading
 # baseName="mpLorentz" # Multiprocessing
 # baseName="ppeLorentz" # ProcessPoolExecutor
-baseName="daskLorentz" # Dask
+# baseName="daskLorentz" # Dask
+baseName="joblibLorentz" # Dask
 
 fNameCat="output/${baseName}/${baseName}Cat.xlsx"
 

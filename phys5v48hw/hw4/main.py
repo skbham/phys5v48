@@ -12,6 +12,8 @@ import threadLorentz
 import mpLorentz
 import ppeLorentz
 import daskLorentz
+import numbaLorentz
+import joblibLorentz
 
 # Initialize the parser
 parser = argparse.ArgumentParser()
@@ -34,7 +36,9 @@ start = perf_counter() # Start timer
 #counts = threadLorentz.run_threaded(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
 #counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Multiprocessing
 #counts = ppeLorentz.run_ppe(args['n'], max_workers=args['nP'], bins=args['bins']) # ProcessPoolExecutor
-counts = daskLorentz.run_dask(args['n'], n_tasks=args['nP'], bins=args['bins']) # Dask
+#counts = daskLorentz.run_dask(args['n'], n_tasks=args['nP'], bins=args['bins']) # Dask
+#counts = numbaLorentz.lorentzian_histogram_numba(args['n'], n_tasks=args['nP'], bins=args['bins']) # Numba
+counts = joblibLorentz.run_joblib(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
 
 end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory
