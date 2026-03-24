@@ -19,7 +19,7 @@ def run_multiproc(n, n_cores=4, bins=100, xmin=-10, xmax=10):
     chunks[:n % n_cores] += 1 # Distribute remainder
     # Use partial function to reset default arguments (bins, xmin, xmax)
     from functools import partial
-    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+    lorentzian_hist_func = partial(invTransSamp.lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
     # Use Pool to distribute chunks to processes
     with multiprocessing.Pool(n_cores) as pool:
         results = pool.map(lorentzian_hist_func, chunks)
