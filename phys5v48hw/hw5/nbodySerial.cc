@@ -2,6 +2,7 @@
 #include <fstream> // File I/O
 #include <random> // Random number generators
 #include <vector> // Vector (dynamic array)
+#include <string>
 #include <tuple> // Tuple (multiple return values)
 #include <chrono> // Time utilities
 
@@ -21,6 +22,8 @@ static const double m_0 = 1.; // Mass value
 static const double epsilon = 0.01; // Softening parameter
 static const double epsilon2 = epsilon * epsilon; // Softening parameter^2
 // Note that epsilon must be greater than zero!
+
+static const string fNameOut = "serialCat.csv";
 
 using Vec = std::vector<double>; // Vector type
 using Vecs = std::vector<Vec>; // Vector of vectors type
@@ -84,60 +87,77 @@ Vec acceleration(const Vec& x, const Vec& m) {
 
 // Compute the next position and velocity for all masses
 std::tuple<Vec, Vec> timestep(const Vec& x0, const Vec& v0, const Vec& m) {
-Vec a0 = acceleration(x0, m); // Calculate particle accelerations
-Vec x1(ND), v1(ND); // Allocate memory
-for (int i = 0; i < ND; ++i) {
-v1[i] = a0[i] * dt + v0[i]; // New velocity
-x1[i] = v1[i] * dt + x0[i]; // New position
+    Vec a0 = acceleration(x0, m); // Calculate particle accelerations
+    Vec x1(ND), v1(ND); // Allocate memory
+    for (int i = 0; i < ND; ++i) {
+        v1[i] = a0[i] * dt + v0[i]; // New velocity
+        x1[i] = v1[i] * dt + x0[i]; // New position
+    }
+    return {x1, v1}; // New positions and velocities
 }
-return {x1, v1}; // New positions and velocities
-}
+
 // Main function
 int main(int argc, char** argv) {
-// Start timing
-auto start = std::chrono::high_resolution_clock::now();
-// Set up the problem
-if (argc > 1) {
-N = std::atoi(argv[1]); // Update the number of masses
-ND = N * D; // Update the size of the state vectors
+    // Start timing
+    auto start = std::chrono::high_resolution_clock::now();
+
+    // Set up the problem
+    if (argc > 1) {
+        N = std::atoi(argv[1]); // Update the number of masses
+        ND = N * D; // Update the size of the state vectors
 }
+
 // Prepare vectors for time points, masses, positions, velocities, and kinetic energy
 Vec t(T+1); // Time points
 for (int i = 0; i <= T; ++i)
-t[i] = double(i) * dt; // Time points
+    t[i] = double(i) * dt; // Time points
 Vec m(N, m_0); // Masses (all equal)
 Vecs x(T+1), v(T+1); // Positions and velocities
 std::tie(x[0], v[0]) = initial_conditions(); // Set up initial conditions
+
 // Simulate the motion of N masses in D-dimensional space
 for (int n = 0; n < T; ++n)
-std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+    std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+
 // Calculate the total kinetic energy of the system
 Vec KE(T+1); // Kinetic energy
 for (int n = 0; n <= T; ++n) {
-double KE_n = 0.; // Kinetic energy
-auto &v_n = v[n]; // Velocities
-for (int i = 0; i < N; ++i) {
-double v2 = 0.; // Velocity magnitude
-for (int j = 0; j < D; ++j) {
-const int k = i * D + j; // Flatten the index
-v2 += v_n[k] * v_n[k]; // Velocity magnitude
+    double KE_n = 0.; // Kinetic energy
+    auto &v_n = v[n]; // Velocities
+    for (int i = 0; i < N; ++i) {
+        double v2 = 0.; // Velocity magnitude
+        for (int j = 0; j < D; ++j) {
+            const int k = i * D + j; // Flatten the index
+            v2 += v_n[k] * v_n[k]; // Velocity magnitude
+        }
+        KE_n += 0.5 * m[i] * v2; // Kinetic energy
+    }
+    KE[n] = KE_n; // Kinetic energy
 }
-KE_n += 0.5 * m[i] * v2; // Kinetic energy
-}
-KE[n] = KE_n; // Kinetic energy
-}
+
 // Print the vector to the specified file
 save(KE, "KE_" + std::to_string(N) + ".txt", "Kinetic Energy");
 save(t, "time_" + std::to_string(N) + ".txt", "Time");
+
 // Output the results
 std::cout << "Total Kinetic Energy = [" << KE[0];
 const int T_skip = T / 50; // Skip every T_skip time steps
 for (int n = 1; n <= T; n += T_skip)
-std::cout << ", " << KE[n];
+    std::cout << ", " << KE[n];
 std::cout << "]" << std::endl;
+
 // Stop timing
 auto end = std::chrono::high_resolution_clock::now();
 double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() / 1000.;
 std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 return 0;
 }
+
+std::string NStr = std::to_string(N);
+std::string elapsedStr = std::to_string(elapsed);
+
+std::ofstream fileOut;
+fileOut.open(fNameOut);
+fileOut. << NStr + "," + elapsedStr + ",\n";
+fileOut.close();
+
