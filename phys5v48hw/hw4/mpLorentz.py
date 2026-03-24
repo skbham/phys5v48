@@ -5,10 +5,8 @@ import numpy as np
 import pandas as pd
 from time import perf_counter
 
-
 # import custom modules
 import invTransSamp # Import the set of functions
-
 
 def run_multiproc(n, n_cores=4, bins=100, xmin=-10, xmax=10):
     """

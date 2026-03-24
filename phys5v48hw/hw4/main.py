@@ -13,6 +13,7 @@ import resource
 import asyncLorentz # Import the set of functions
 import threadLorentz
 import mpLorentz
+import ppeLorentz
 
 # Initialize the parser
 parser = argparse.ArgumentParser()
@@ -33,7 +34,8 @@ start = perf_counter() # Start timer
 
 #counts = asyncLorentz.run_async(args['n'], n_tasks=args['nP'], bins=args['bins'], n_subchunks=10) # AsyncIO
 #counts = threadLorentz.run_threaded(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+#counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Multiprocessing
+counts = ppeLorentz.run_ppe(args['n'], max_workers=args['nP'], bins=args['bins']) # ProcessPoolExecutor
 
 end = perf_counter() # Stop timer
 tracemalloc.stop() # Stop monitoring memory
