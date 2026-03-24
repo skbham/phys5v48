@@ -12,169 +12,295 @@ Also make sure that all modulefiles written in TCL start with the string
 
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
-    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
-TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+    counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Threading
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpLorentz.py", line 22, in run_multiproc
+    lorentzian_hist_func = partial(lorentzian_histogram, bins=bins, xmin=xmin, xmax=xmax)
+                                   ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'lorentzian_histogram' is not defined
