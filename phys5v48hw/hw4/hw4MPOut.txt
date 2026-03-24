@@ -1,0 +1,180 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"mpi"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "mpi"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 36, in <module>
+    counts = mpLorentz.run_multiproc(args['n'], n_threads=args['nP'], bins=args['bins']) # Threading
+TypeError: run_multiproc() got an unexpected keyword argument 'n_threads'
