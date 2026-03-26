@@ -11,254 +11,254 @@ Also make sure that all modulefiles written in TCL start with the string
 
 
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 15, in <module>
-    import numbaLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py", line 3, in <module>
-    from numba import njit, prange, atomic
-ImportError: cannot import name 'atomic' from 'numba' (/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/__init__.py)
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
+    import joblibLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'
