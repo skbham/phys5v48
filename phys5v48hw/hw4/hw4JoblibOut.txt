@@ -11,254 +11,743 @@ Also make sure that all modulefiles written in TCL start with the string
 
 
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 41, in <module>
+    counts = joblibLorentz.run_joblib(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 19, in run_joblib
+    results = Parallel(n_jobs=n_jobs)(
+        delayed(invTransSamp.lorentzian_histogram)(chunk, bins, xmin, xmax)
+        for chunk in chunks
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/parallel.py", line 2070, in __call__
+    next(output)
+    ~~~~^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/parallel.py", line 1675, in _get_outputs
+    self._start(iterator, pre_dispatch)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/parallel.py", line 1658, in _start
+    if self.dispatch_one_batch(iterator):
+       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/parallel.py", line 1540, in dispatch_one_batch
+    self._dispatch(tasks)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/parallel.py", line 1437, in _dispatch
+    job = self._backend.submit(batch, callback=batch_tracker)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/_parallel_backends.py", line 693, in submit
+    future = self._workers.submit(func)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/reusable_executor.py", line 230, in submit
+    return super().submit(fn, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/process_executor.py", line 1278, in submit
+    self._ensure_executor_running()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/process_executor.py", line 1250, in _ensure_executor_running
+    self._adjust_process_count()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/process_executor.py", line 1239, in _adjust_process_count
+    p.start()
+    ~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ~~~~~~~~~~~^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/process.py", line 45, in _Popen
+    return Popen(process_obj)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 48, in __init__
+    self._launch(process_obj)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 128, in _launch
+    pid = fork_exec(cmd_python, self._fds, env=process_obj.env)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/fork_exec.py", line 29, in fork_exec
+    errpipe_read, errpipe_write = os.pipe()
+                                  ~~~~~~~^^
+OSError: [Errno 24] Too many open files
+
+
+--------------------------------------------------------------------------------
+LokyProcess-135 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-45 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-76 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-264 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-41 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-58 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-12 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-109 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-257 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-159 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-20 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-152 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-16 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-30 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-51 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-134 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-72 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-496 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-130 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-249 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-21 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-169 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-24 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-383 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-47 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-53 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-31 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-593 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-25 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-151 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-583 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-799 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-28 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-170 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-22 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-700 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-74 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-848 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-19 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-121 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-210 failed with traceback: 
+--------------------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 16, in <module>
-    import joblibLorentz
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/joblibLorentz.py", line 3, in <module>
-    from joblib import Parallel, delayed
-ModuleNotFoundError: No module named 'joblib'
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-69 failed with traceback: 
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-326 failed with traceback: 
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-228 failed with traceback: 
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-27 failed with traceback: 
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+LokyProcess-144 failed with traceback: 
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/popen_loky_posix.py", line 176, in <module>
+    process_obj = pickle.load(from_parent)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/joblib/externals/loky/backend/synchronize.py", line 131, in __setstate__
+    self._semlock = _SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+
+
+--------------------------------------------------------------------------------
+slurmstepd-c-10-01: error: *** JOB 3418474 ON c-10-01 CANCELLED AT 2026-03-26T12:49:47 DUE TO TIME LIMIT ***
