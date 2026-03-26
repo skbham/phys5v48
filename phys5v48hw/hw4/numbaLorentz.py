@@ -1,6 +1,7 @@
 # numba_lorentz.py
 
-from numba import njit, prange, atomic
+from numba import njit, prange
+import atomic
 import numpy as np
 import pandas as pd
 from time import perf_counter

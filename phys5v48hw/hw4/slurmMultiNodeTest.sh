@@ -19,7 +19,7 @@ source /home/biscuit/Documents/utd/phys5v48/venv/bin/activate
 n=1000
 nodes=2
 # baseName="asyncLorentz"
-baseName="threadLorentz" # Threading
+baseName="joblibLorentz" # Threading
 fNameCat="output/${baseName}/${baseName}Cat.xlsx"
 
 for ((nP=1; nP<17; nP*=2)); do
