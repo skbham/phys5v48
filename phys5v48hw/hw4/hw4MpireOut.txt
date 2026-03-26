@@ -1,0 +1,978 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"mpi"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "mpi"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 193, in _start_workers
+    self._start_worker(worker_id)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 222, in _start_worker
+    self._workers[worker_id].start()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ~~~~~~~~~~~^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/popen_fork.py", line 66, in _launch
+    child_r, parent_w = os.pipe()
+                        ~~~~~~~^^
+OSError: [Errno 24] Too many open files
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 193, in _start_workers
+    self._start_worker(worker_id)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 222, in _start_worker
+    self._workers[worker_id].start()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ~~~~~~~~~~~^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/popen_fork.py", line 66, in _launch
+    child_r, parent_w = os.pipe()
+                        ~~~~~~~^^
+OSError: [Errno 24] Too many open files
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 193, in _start_workers
+    self._start_worker(worker_id)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 222, in _start_worker
+    self._workers[worker_id].start()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ~~~~~~~~~~~^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/popen_fork.py", line 66, in _launch
+    child_r, parent_w = os.pipe()
+                        ~~~~~~~^^
+OSError: [Errno 24] Too many open files
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
+Traceback (most recent call last):
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 733, in imap_unordered
+    self._start_workers()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 187, in _start_workers
+    self._worker_comms.init_comms()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 171, in init_comms
+    self._task_queues = [self.ctx.JoinableQueue() for _ in range(self.n_jobs)]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 108, in JoinableQueue
+    return JoinableQueue(maxsize, ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 317, in __init__
+    Queue.__init__(self, maxsize, ctx=ctx)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/queues.py", line 41, in __init__
+    self._rlock = ctx.Lock()
+                  ~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        kind, value, maxvalue, self._make_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        unlink_now)
+        ^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 43, in <module>
+    counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpireLorentz.py", line 20, in run_mpire
+    results = pool.map(invTransSamp.lorentzian_histogram, chunks)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 467, in map
+    results = self.map_unordered(
+        func, ((args_idx, args) for args_idx, args in enumerate(iterable_of_args)), iterable_len, max_tasks_active,
+        chunk_size, n_splits, worker_lifespan, progress_bar, worker_init, worker_exit, task_timeout,
+        worker_init_timeout, worker_exit_timeout, progress_bar_options, progress_bar_style
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 534, in map_unordered
+    return list(self.imap_unordered(func, iterable_of_args, iterable_len, max_tasks_active, chunk_size,
+                                    n_splits, worker_lifespan, progress_bar, worker_init, worker_exit,
+                                    task_timeout, worker_init_timeout, worker_exit_timeout, progress_bar_options,
+                                    progress_bar_style))
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/pool.py", line 810, in imap_unordered
+    self._worker_comms.reset_progress()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpire/comms.py", line 208, in reset_progress
+    self._tasks_completed_array[:] = [0] * self.n_jobs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object does not support item assignment
