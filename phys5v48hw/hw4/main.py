@@ -65,6 +65,7 @@ df.loc[len(df)] = newRow
 # Write to the catalog
 df.to_excel(excel_writer=args['fNameOut'], columns=colList, engine='openpyxl')
 
+#print(counts)
 # Save the counts to a .txt file
 np.savetxt(args['fNameCounts'], np.array(counts))
 

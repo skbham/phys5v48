@@ -1,13 +1,9 @@
 # mpire_lorentz.py
 from mpire import WorkerPool
 
-import argparse
-import asyncio
 import numpy as np
-import os
 import pandas as pd
 from time import perf_counter
-import tracemalloc
 
 # import custom modules
 import invTransSamp # Import the set of functions
@@ -22,5 +18,5 @@ def run_mpire(n, n_jobs=4, bins=100, xmin=-10, xmax=10):
     with WorkerPool(n_jobs=n_jobs) as pool:
         # See mpire docs for argument passing; alternatively use starmap
         results = pool.map(invTransSamp.lorentzian_histogram, chunks)
-    return np.sum(results, axis=0) # Aggregate results
+    return results # Aggregate results
 
