@@ -150,8 +150,6 @@ std::cout << "]" << std::endl;
 auto end = std::chrono::high_resolution_clock::now();
 double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() / 1000.;
 std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
-return 0;
-}
 
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
@@ -160,4 +158,9 @@ std::ofstream fileOut;
 fileOut.open(fNameOut);
 fileOut. << NStr + "," + elapsedStr + ",\n";
 fileOut.close();
+
+return 0;
+
+}
+
 
