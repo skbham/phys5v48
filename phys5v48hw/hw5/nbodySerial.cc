@@ -155,9 +155,9 @@ std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
 
-std::ostream fileOut;
+std::ofstream fileOut;
 fileOut.open(fNameOut, std::ios::out | std::ios::app);
-fileOut << NStr + "," + elapsedStr + ",\n";
+fileOut << NStr + "," + elapsedStr + ",\n" << std::endl;
 fileOut.close();
 
 return 0;

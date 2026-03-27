@@ -138,7 +138,7 @@ for (int n = 0; n <= T; ++n) {
 
 // Print the vector to the specified file
 save(KE, "./output/" + keyword + "/KE_" + std::to_string(N) + ".txt", "Kinetic Energy");
-save(t, "/output/" + keyword + "/time_" + std::to_string(N) + ".txt", "Time");
+save(t, "./output/" + keyword + "/time_" + std::to_string(N) + ".txt", "Time");
 
 // Output the results
 std::cout << "Total Kinetic Energy = [" << KE[0];
@@ -155,8 +155,8 @@ std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
 
-std::ofstream fileOut;
-fileOut.open(fNameOut);
+std::ostream fileOut;
+fileOut.open(fNameOut, std::ios::out | std::ios::app);
 fileOut << NStr + "," + elapsedStr + ",\n";
 fileOut.close();
 
