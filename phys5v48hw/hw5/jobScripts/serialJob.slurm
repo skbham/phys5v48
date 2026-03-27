@@ -16,7 +16,7 @@ fNameCat="output/${baseName}/${baseName}Cat.xlsx"
 
 g++ -O3 -std=c++17 nbodySerial.cc -o nbodySerial
 
-for ((N=128; N<10000; N*=2)); do
+for ((N=128; N<5000; N*=2)); do
 
     time ./nbodySerial "$N"
 
