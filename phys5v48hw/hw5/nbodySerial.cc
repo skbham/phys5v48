@@ -156,7 +156,7 @@ std::string elapsedStr = std::to_string(elapsed);
 
 std::ofstream fileOut;
 fileOut.open(fNameOut);
-fileOut. << NStr + "," + elapsedStr + ",\n";
+fileOut << NStr + "," + elapsedStr + ",\n";
 fileOut.close();
 
 return 0;

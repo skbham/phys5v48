@@ -5,7 +5,7 @@
 #SBATCH -N 1 # nodes
 #SBATCH -n 16 # total ranks
 #SBATCH -c 1 # CPUs per rank
-#SBATCH -t 00:10:00 # walltime
+#SBATCH -t 00:05:00 # walltime
 #SBATCH --exclusive # avoid interference
 
 g++ -O3 -std=c++17 nbodySerial.cc -o nbodySerial
