@@ -23,7 +23,7 @@ static const double epsilon = 0.01; // Softening parameter
 static const double epsilon2 = epsilon * epsilon; // Softening parameter^2
 // Note that epsilon must be greater than zero!
 
-static const string fNameOut = "serialCat.csv";
+std::string fNameOut = "serialCat.csv";
 
 using Vec = std::vector<double>; // Vector type
 using Vecs = std::vector<Vec>; // Vector of vectors type
