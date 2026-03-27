@@ -156,7 +156,7 @@ std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
 
 std::fstream fileOut;
-fileOut.open(fNameOut);
+fileOut.open(fNameOut, ios::app);
 fileOut << NStr + "," + elapsedStr + ",\n";
 fileOut.close();
 
