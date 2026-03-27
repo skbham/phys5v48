@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH -J hw5OMP
+#SBATCH --output=hw5OMPOut.txt
+#SBATCH -p cpu-preempt
+#SBATCH -N 1 # nodes
+#SBATCH -n 16 # total ranks
+#SBATCH -c 1 # CPUs per rank
+#SBATCH -t 00:05:00 # walltime
+#SBATCH --exclusive # avoid interference
+
+g++ -O3 -std=c++17 nbodyOMP.cc -o nbodyOMP
+
+for ((N=128; N<5000; N*=2)); do
+
+    time ./nbodyOMP "$N"
+
+done

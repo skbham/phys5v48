@@ -23,8 +23,8 @@ static const double epsilon = 0.01; // Softening parameter
 static const double epsilon2 = epsilon * epsilon; // Softening parameter^2
 // Note that epsilon must be greater than zero!
 
-std::string fNameOut = "./output/serial/serialCat.csv";
-std::string keyword = "serial";
+std::string fNameOut = "./output/omp/ompCat.csv";
+std::string keyword = "omp";
 
 using Vec = std::vector<double>; // Vector type
 using Vecs = std::vector<Vec>; // Vector of vectors type
@@ -138,7 +138,7 @@ for (int n = 0; n <= T; ++n) {
 
 // Print the vector to the specified file
 save(KE, "./output/" + keyword + "/KE_" + std::to_string(N) + ".txt", "Kinetic Energy");
-save(t, "./output/" + keyword + "/time_" + std::to_string(N) + ".txt", "Time");
+save(t, "/output/" + keyword + "/time_" + std::to_string(N) + ".txt", "Time");
 
 // Output the results
 std::cout << "Total Kinetic Energy = [" << KE[0];
@@ -155,7 +155,7 @@ std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
 
-std::fstream fileOut;
+std::ofstream fileOut;
 fileOut.open(fNameOut);
 fileOut << NStr + "," + elapsedStr + ",\n";
 fileOut.close();
