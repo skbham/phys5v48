@@ -8,12 +8,6 @@
 #SBATCH -t 00:10:00 # walltime
 #SBATCH --exclusive # avoid interference
 
-
-# baseName="asyncLorentz" # AsyncIO
-baseName="threadLorentz" # Threading
-
-fNameCat="output/${baseName}/${baseName}Cat.xlsx"
-
 g++ -O3 -std=c++17 nbodySerial.cc -o nbodySerial
 
 for ((N=128; N<5000; N*=2)); do
