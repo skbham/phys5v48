@@ -155,8 +155,8 @@ std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
 
-std::fstream fileOut;
-fileOut.open(fNameOut, ios::app);
+std::ostream fileOut;
+fileOut.open(fNameOut, std::ios::out | std::ios::app);
 fileOut << NStr + "," + elapsedStr + ",\n";
 fileOut.close();
 
