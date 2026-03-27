@@ -8,10 +8,14 @@
 #SBATCH -t 00:05:00 # walltime
 #SBATCH --exclusive # avoid interference
 
-g++ -O3 -std=c++17 nbodyOMP.cc -o nbodyOMP
+g++ -O3 -std=c++17 -fopenmp nbodyOMP.cc -o nbodyOMP
 
-for ((N=128; N<5000; N*=2)); do
+for ((N=128; N<=5000; N*=2)); do
+    for ((tNum=1; tNum<=16; tNum*=2)); do
 
-    time ./nbodyOMP "$N"
-
+        export OMP_NUM_THREADS=$tNum
+        time ./nbodyOMP "$N" "$tNum"
+        
+    done
 done
+

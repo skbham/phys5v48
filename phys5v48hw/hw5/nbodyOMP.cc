@@ -5,9 +5,11 @@
 #include <string>
 #include <tuple> // Tuple (multiple return values)
 #include <chrono> // Time utilities
+#include <omp.h>
 
 // Global constants
 static int N = 128; // Number of masses
+static int tNum = 1; // Number of threads
 static const int D = 3; // Dimensionality
 static int ND = N * D; // Size of the state vectors
 static const double G = 0.5; // Gravitational constant
@@ -66,6 +68,8 @@ std::tuple<Vec, Vec> initial_conditions() {
 // a_i = G * sum_{ji} m_j * (x_j - x_i) / |x_j - x_i|^3
 Vec acceleration(const Vec& x, const Vec& m) {
     Vec a(ND); // Accelerations
+
+    #pragma omp parallel for 
     for (int i = 0; i < N; ++i) {
         const int iD = i * D; // Flatten the index
         double dx[D]; // Difference in position
@@ -90,6 +94,8 @@ Vec acceleration(const Vec& x, const Vec& m) {
 std::tuple<Vec, Vec> timestep(const Vec& x0, const Vec& v0, const Vec& m) {
     Vec a0 = acceleration(x0, m); // Calculate particle accelerations
     Vec x1(ND), v1(ND); // Allocate memory
+
+    #pragma omp parallel for
     for (int i = 0; i < ND; ++i) {
         v1[i] = a0[i] * dt + v0[i]; // New velocity
         x1[i] = v1[i] * dt + x0[i]; // New position
@@ -106,6 +112,8 @@ int main(int argc, char** argv) {
     if (argc > 1) {
         N = std::atoi(argv[1]); // Update the number of masses
         ND = N * D; // Update the size of the state vectors
+
+        tNum = std::atoi(argv[2]); // Update the number of masses
 }
 
 // Prepare vectors for time points, masses, positions, velocities, and kinetic energy
@@ -122,6 +130,7 @@ for (int n = 0; n < T; ++n)
 
 // Calculate the total kinetic energy of the system
 Vec KE(T+1); // Kinetic energy
+#pragma omp parallel for
 for (int n = 0; n <= T; ++n) {
     double KE_n = 0.; // Kinetic energy
     auto &v_n = v[n]; // Velocities
@@ -154,10 +163,11 @@ std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
+std::string tNumStr = std::to_string(tNum);
 
-std::ostream fileOut;
+std::ofstream fileOut;
 fileOut.open(fNameOut, std::ios::out | std::ios::app);
-fileOut << NStr + "," + elapsedStr + ",\n";
+fileOut << NStr + "," + elapsedStr + "," + tNumStr + ",\n" << std::endl;
 fileOut.close();
 
 return 0;
