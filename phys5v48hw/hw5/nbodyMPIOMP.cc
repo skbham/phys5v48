@@ -189,6 +189,13 @@ int main(int argc, char** argv) {
         tNum = std::atoi(argv[2]); // Update the number of threads
 }
 
+// Hybrid MPI+OpenMP version
+#pragma omp parallel
+{
+thread = omp_get_thread_num(); // Unique thread number
+gen.seed(now_int ^ (thread * n_ranks + rank)); // Seed the random number generator
+}
+
 std::cout << "Start" << std::endl;
 setup_parallelism();
 std::cout << "Setup Fin" << std::endl;
