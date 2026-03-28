@@ -16,32 +16,33 @@ Setup Fin
 Setup Fin
 Init Cond Fin
 Init Cond Fin
-slurmstepd-c-10-03: error: *** JOB 3459201 ON c-10-03 CANCELLED AT 2026-03-27T23:27:33 DUE TO TIME LIMIT ***
-mpiexec: Forwarding signal 18 to job
---------------------------------------------------------------------------
-ORTE has lost communication with a remote daemon.
+Timestep Fin
+Timestep Fin
+KE Fin
+0
+5000
+5000
+8
+301
+Rank 0
+KE Fin
+5000
+10000
+5000
+8
+301
+Else
+MPI Red Fin
+MPI Red Fin
+Total Kinetic Energy = [0, 118231, 8.53735e+06, 1.16407e+08, 8.02343e+07, 7.56557e+07, 7.43098e+07, 7.35223e+07, 7.30941e+07, 7.20957e+07, 7.18485e+07, 7.15124e+07, 7.08935e+07, 7.05948e+07, 7.05717e+07, 7.00831e+07, 6.98251e+07, 6.98088e+07, 6.93943e+07, 6.97136e+07, 6.91833e+07, 6.94001e+07, 6.90471e+07, 6.85461e+07, 6.89668e+07, 6.85015e+07, 6.81261e+07, 6.8729e+07, 6.83641e+07, 6.8326e+07, 6.79248e+07, 6.80619e+07, 6.77483e+07, 6.78938e+07, 6.74783e+07, 6.76947e+07, 6.75051e+07, 6.72677e+07, 6.74861e+07, 6.73536e+07, 6.70141e+07, 6.72847e+07, 6.70704e+07, 6.66891e+07, 6.70615e+07, 6.67475e+07, 6.64352e+07, 6.65983e+07, 6.66137e+07, 6.66443e+07, 6.64104e+07]
+Total Kinetic Energy = [0, 59115.4, 4.26867e+06, 5.82033e+07, 4.01171e+07, 3.78278e+07, 3.71549e+07, 3.67611e+07, 3.65471e+07, 3.60479e+07, 3.59242e+07, 3.57562e+07, 3.54468e+07, 3.52974e+07, 3.52859e+07, 3.50415e+07, 3.49125e+07, 3.49044e+07, 3.46971e+07, 3.48568e+07, 3.45916e+07, 3.47e+07, 3.45236e+07, 3.42731e+07, 3.44834e+07, 3.42507e+07, 3.40631e+07, 3.43645e+07, 3.41821e+07, 3.4163e+07, 3.39624e+07, 3.40309e+07, 3.38741e+07, 3.39469e+07, 3.37391e+07, 3.38474e+07, 3.37525e+07, 3.36339e+07, 3.37431e+07, 3.36768e+07, 3.35071e+07, 3.36424e+07, 3.35352e+07, 3.33445e+07, 3.35308e+07, 3.33737e+07, 3.32176e+07, 3.32991e+07, 3.33069e+07, 3.33222e+07, 3.32052e+07]
+Runtime = 54.302 s for N = 10000
+Out Fin
+Fin Fin
+Runtime = 54.306 s for N = 10000
+Out Fin
+Fin Fin
 
-  HNP daemon   : [[60931,0],0] on node c-10-03
-  Remote daemon: [[60931,0],1] on node c-10-04
-
-This is usually due to either a failure of the TCP network
-connection to the node, or possibly an internal failure of
-the daemon itself. We cannot recover from this failure, and
-therefore will terminate the job.
---------------------------------------------------------------------------
-mpiexec: abort is already in progress...hit ctrl-c again to forcibly terminate
-
-[c-10-03:696350] *** Process received signal ***
-[c-10-03:696350] Signal: Segmentation fault (11)
-[c-10-03:696350] Signal code: Address not mapped (1)
-[c-10-03:696350] Failing at address: 0x30
-[c-10-03:696350] [ 0] /lib64/libpthread.so.0(+0x12990)[0x7f9694aa7990]
-[c-10-03:696350] [ 1] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_pmix_pmix3x.so(PMIx_Finalize+0x538)[0x7f9691e2dc38]
-[c-10-03:696350] [ 2] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_pmix_pmix3x.so(pmix3x_client_finalize+0x39a)[0x7f9691df681a]
-[c-10-03:696350] [ 3] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_ess_hnp.so(+0x3c94)[0x7f96928fec94]
-[c-10-03:696350] [ 4] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_ess_hnp.so(+0x3d2c)[0x7f96928fed2c]
-[c-10-03:696350] [ 5] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/libopen-pal.so.40(opal_libevent2022_event_base_loop+0x7a8)[0x7f9695b39188]
-[c-10-03:696350] [ 6] mpiexec[0x400f79]
-[c-10-03:696350] [ 7] /lib64/libc.so.6(__libc_start_main+0xe5)[0x7f96946f87e5]
-[c-10-03:696350] [ 8] mpiexec[0x400d0e]
-[c-10-03:696350] *** End of error message ***
+real	0m54.719s
+user	1m44.819s
+sys	0m0.828s
