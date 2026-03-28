@@ -5,6 +5,7 @@
 #include <string>
 #include <tuple> // Tuple (multiple return values)
 #include <chrono> // Time utilities
+#include <mpi.h>
 
 // Global constants
 static int N = 128; // Number of masses
@@ -24,8 +25,14 @@ static const double epsilon = 0.01; // Softening parameter
 static const double epsilon2 = epsilon * epsilon; // Softening parameter^2
 // Note that epsilon must be greater than zero!
 
-std::string fNameOut = "./output/serial/serialCat.csv";
-std::string keyword = "serial";
+static int rank, n_ranks; // Process rank and number of processes
+static std::vector<int> counts, displs; // Counts and displacements for MPI_Allgatherv
+static std::vector<int> countsD, displsD; // State counts and displacements for MPI_Allgatherv
+static int N_beg, N_end, N_local; // Mass range for each process [N_beg, N_end)
+static int ND_beg, ND_end, ND_local; // State vector range for each process [ND_beg, ND_end)
+
+std::string fNameOut = "./output/mpi/mpiCat.csv";
+std::string keyword = "mpi";
 
 using Vec = std::vector<double>; // Vector type
 using Vecs = std::vector<Vec>; // Vector of vectors type
@@ -33,6 +40,48 @@ using Vecs = std::vector<Vec>; // Vector of vectors type
 // Random number generator
 static std::mt19937 gen; // Mersenne twister engine
 static std::uniform_real_distribution<> ran(0., 1.); // Uniform distribution
+
+// Set up parallelism
+void setup_parallelism() {
+    MPI_Init(NULL, NULL); // Initialize MPI
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank); // Unique process rank
+    MPI_Comm_size(MPI_COMM_WORLD, &n_ranks);
+
+    // Get the current time and convert it to an integer
+    auto now = std::chrono::high_resolution_clock::now();
+    auto now_cast = std::chrono::time_point_cast<std::chrono::microseconds>(now);
+    auto now_int = now_cast.time_since_epoch().count();
+    
+    // Pure MPI version
+    gen.seed(now_int ^ rank); // Seed the random number generator
+    
+    // Divide the masses among the processes (needed for MPI_Allgatherv)
+    counts.resize(n_ranks); // Counts for each process
+    displs.resize(n_ranks); // Displacements for each process
+    countsD.resize(n_ranks); // State counts for each process
+    displsD.resize(n_ranks); // State displacements for each process
+    const int remainder = N % n_ranks; // Remainder of the division
+    for (int i = 0; i < n_ranks; ++i) {
+        counts[i] = N / n_ranks; // Divide the masses among the processes
+        displs[i] = i * counts[i]; // Displacements where each segment begins
+        if (i < remainder) {
+            counts[i] += 1; // Correct the count
+            displs[i] += i; // Correct the displacement
+        } else {
+            displs[i] += remainder; // Correct the displacement
+        }
+        countsD[i] = counts[i] * D; // State counts for each process
+        displsD[i] = displs[i] * D; // State displacements for each process
+    }
+
+    // Set up the local mass ranges
+    N_beg = displs[rank]; // Mass range for each process [N_beg, N_end)
+    N_end = N_beg + counts[rank]; // Mass range for each process [N_beg, N_end)
+    ND_beg = N_beg * D; // State vector range for each process [ND_beg, ND_end)
+    ND_end = N_end * D; // State vector range for each process [ND_beg, ND_end)
+    N_local = N_end - N_beg; // Local number of masses
+    ND_local = ND_end - ND_beg; // Local size of the state vectors
+}
 
 // Print a vector to a file
 template <typename T>
@@ -56,10 +105,19 @@ std::tuple<Vec, Vec> initial_conditions() {
     Vec x(ND), v(ND); // Allocate memory
     const double dx = x_max - x_min; // Position range
     const double dv = v_max - v_min; // Velocity range
-    for (int i = 0; i < ND; ++i) {
+    for (int i = ND_beg; i < ND_end; ++i) {
         x[i] = ran(gen) * dx + x_min; // Random initial positions
         v[i] = ran(gen) * dv + v_min; // Random initial velocities
     }
+
+    if (n_ranks > 1) { // More than one process
+        // Gather the initial positions and velocities
+        MPI_Allgatherv(x.data() + ND_beg, ND_local, MPI_DOUBLE, x.data(),
+        countsD.data(), displsD.data(), MPI_DOUBLE, MPI_COMM_WORLD);
+        MPI_Allgatherv(v.data() + ND_beg, ND_local, MPI_DOUBLE, v.data(),
+        countsD.data(), displsD.data(), MPI_DOUBLE, MPI_COMM_WORLD);
+    }
+
     return {x, v}; // Positions and velocities
 }
 
@@ -67,10 +125,10 @@ std::tuple<Vec, Vec> initial_conditions() {
 // a_i = G * sum_{ji} m_j * (x_j - x_i) / |x_j - x_i|^3
 Vec acceleration(const Vec& x, const Vec& m) {
     Vec a(ND); // Accelerations
-    for (int i = 0; i < N; ++i) {
+    for (int i = N_beg; i < N_end; ++i) {
         const int iD = i * D; // Flatten the index
         double dx[D]; // Difference in position
-        for (int j = 0; j < N; ++j) {
+        for (int j = N_beg; j < N_end; ++j) {
             const int jD = j * D; // Flatten the index
             double dx2 = epsilon2; // Distance^2 (softened)
             for (int k = 0; k < D; ++k) {
@@ -84,17 +142,33 @@ Vec acceleration(const Vec& x, const Vec& m) {
             }
         }
     }
+
+    if (n_ranks > 1) { // More than one process
+        // Gather acceleration
+        MPI_Allgatherv(a.data() + N_beg, N_local, MPI_DOUBLE, a.data(),
+        countsD.data(), displsD.data(), MPI_DOUBLE, MPI_COMM_WORLD);
+    }
+
     return a; // Accelerations
 }
 
 // Compute the next position and velocity for all masses
 std::tuple<Vec, Vec> timestep(const Vec& x0, const Vec& v0, const Vec& m) {
     Vec a0 = acceleration(x0, m); // Calculate particle accelerations
-    Vec x1(ND), v1(ND); // Allocate memory
-    for (int i = 0; i < ND; ++i) {
+    Vec x1(ND_end - ND_beg), v1(ND_end - ND_beg); // Allocate memory
+    for (int i = ND_beg; i < ND_end; ++i) {
         v1[i] = a0[i] * dt + v0[i]; // New velocity
         x1[i] = v1[i] * dt + x0[i]; // New position
     }
+
+    if (n_ranks > 1) { // More than one process
+        // Gather the initial positions and velocities
+        MPI_Allgatherv(x1.data() + ND_beg, ND_local, MPI_DOUBLE, x1.data(),
+        countsD.data(), displsD.data(), MPI_DOUBLE, MPI_COMM_WORLD);
+        MPI_Allgatherv(v1.data() + ND_beg, ND_local, MPI_DOUBLE, v1.data(),
+        countsD.data(), displsD.data(), MPI_DOUBLE, MPI_COMM_WORLD);
+    }
+
     return {x1, v1}; // New positions and velocities
 }
 
@@ -108,6 +182,7 @@ int main(int argc, char** argv) {
         N = std::atoi(argv[1]); // Update the number of masses
         ND = N * D; // Update the size of the state vectors
 
+        tNum = std::atoi(argv[2]); // Update the number of threads
 }
 
 // Prepare vectors for time points, masses, positions, velocities, and kinetic energy
@@ -127,7 +202,7 @@ Vec KE(T+1); // Kinetic energy
 for (int n = 0; n <= T; ++n) {
     double KE_n = 0.; // Kinetic energy
     auto &v_n = v[n]; // Velocities
-    for (int i = 0; i < N; ++i) {
+    for (int i = N_beg; i < N_end; ++i) {
         double v2 = 0.; // Velocity magnitude
         for (int j = 0; j < D; ++j) {
             const int k = i * D + j; // Flatten the index
@@ -136,6 +211,15 @@ for (int n = 0; n <= T; ++n) {
         KE_n += 0.5 * m[i] * v2; // Kinetic energy
     }
     KE[n] = KE_n; // Kinetic energy
+}
+
+if (rank == 0) {
+    // Reduce the kinetic energies
+    MPI_Reduce(MPI_IN_PLACE, KE.data(), T+1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    // Protected save and print logic ...
+} else {
+    // Send the kinetic energies
+    MPI_Reduce(KE.data(), NULL, T+1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 }
 
 // Print the vector to the specified file
@@ -156,12 +240,13 @@ std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
-std::string tNumStr = std::to_string(tNum);
 
 std::ofstream fileOut;
 fileOut.open(fNameOut, std::ios::out | std::ios::app);
-fileOut << NStr + "," + elapsedStr + "," + tNumStr + ",\n" << std::endl;
+fileOut << NStr + "," + elapsedStr + ",\n" << std::endl;
 fileOut.close();
+
+MPI_Finalize(); // Finalize MPI 
 
 return 0;
 

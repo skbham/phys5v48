@@ -113,7 +113,7 @@ int main(int argc, char** argv) {
         N = std::atoi(argv[1]); // Update the number of masses
         ND = N * D; // Update the size of the state vectors
 
-        tNum = std::atoi(argv[2]); // Update the number of masses
+        tNum = std::atoi(argv[2]); // Update the number of threads
 }
 
 // Prepare vectors for time points, masses, positions, velocities, and kinetic energy
