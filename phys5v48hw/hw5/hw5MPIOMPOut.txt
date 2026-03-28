@@ -1,0 +1,47 @@
+nbodyMPIOMP.cc: In function 'int main(int, char**)':
+nbodyMPIOMP.cc:195:1: error: 'thread' was not declared in this scope; did you mean 'fread'?
+  195 | thread = omp_get_thread_num(); // Unique thread number
+      | ^~~~~~
+      | fread
+nbodyMPIOMP.cc:195:10: error: 'omp_get_thread_num' was not declared in this scope
+  195 | thread = omp_get_thread_num(); // Unique thread number
+      |          ^~~~~~~~~~~~~~~~~~
+nbodyMPIOMP.cc:196:10: error: 'now_int' was not declared in this scope; did you mean 'u_int'?
+  196 | gen.seed(now_int ^ (thread * n_ranks + rank)); // Seed the random number generator
+      |          ^~~~~~~
+      |          u_int
+Start
+Start
+Setup Fin
+Setup Fin
+Init Cond Fin
+Init Cond Fin
+slurmstepd-c-10-03: error: *** JOB 3459201 ON c-10-03 CANCELLED AT 2026-03-27T23:27:33 DUE TO TIME LIMIT ***
+mpiexec: Forwarding signal 18 to job
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[60931,0],0] on node c-10-03
+  Remote daemon: [[60931,0],1] on node c-10-04
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------
+mpiexec: abort is already in progress...hit ctrl-c again to forcibly terminate
+
+[c-10-03:696350] *** Process received signal ***
+[c-10-03:696350] Signal: Segmentation fault (11)
+[c-10-03:696350] Signal code: Address not mapped (1)
+[c-10-03:696350] Failing at address: 0x30
+[c-10-03:696350] [ 0] /lib64/libpthread.so.0(+0x12990)[0x7f9694aa7990]
+[c-10-03:696350] [ 1] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_pmix_pmix3x.so(PMIx_Finalize+0x538)[0x7f9691e2dc38]
+[c-10-03:696350] [ 2] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_pmix_pmix3x.so(pmix3x_client_finalize+0x39a)[0x7f9691df681a]
+[c-10-03:696350] [ 3] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_ess_hnp.so(+0x3c94)[0x7f96928fec94]
+[c-10-03:696350] [ 4] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/openmpi/mca_ess_hnp.so(+0x3d2c)[0x7f96928fed2c]
+[c-10-03:696350] [ 5] /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/lib/libopen-pal.so.40(opal_libevent2022_event_base_loop+0x7a8)[0x7f9695b39188]
+[c-10-03:696350] [ 6] mpiexec[0x400f79]
+[c-10-03:696350] [ 7] /lib64/libc.so.6(__libc_start_main+0xe5)[0x7f96946f87e5]
+[c-10-03:696350] [ 8] mpiexec[0x400d0e]
+[c-10-03:696350] *** End of error message ***

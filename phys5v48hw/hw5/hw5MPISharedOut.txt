@@ -1,0 +1,847 @@
+nbodyMPIShared.cc: In function 'void initial_conditions()':
+nbodyMPIShared.cc:141:14: error: no matching function for call to 'swap(Vec&, double*&)'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/exception_ptr.h:43,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/exception:168,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/ios:39,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/ostream:38,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/iostream:39,
+                 from nbodyMPIShared.cc:1:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:196:5: note: candidate: 'template<class _Tp> std::_Require<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> > std::swap(_Tp&, _Tp&)'
+  196 |     swap(_Tp& __a, _Tp& __b)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:196:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   deduced conflicting types for parameter '_Tp' ('std::vector<double>' and 'double*')
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:220:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> std::__enable_if_t<std::__is_swappable<_Tp>::value> std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])'
+  220 |     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:220:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   mismatched types '_Tp [_Nm]' and 'Vec' {aka 'std::vector<double>'}
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_algobase.h:64,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/string:50,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/locale_classes.h:40,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/ios_base.h:41,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/ios:42:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:709:5: note: candidate: 'template<class _T1, class _T2> typename std::enable_if<std::__and_<std::__is_swappable<_T1>, std::__is_swappable<_T2> >::value>::type std::swap(pair<_T1, _T2>&, pair<_T1, _T2>&)'
+  709 |     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:709:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::pair<_T1, _T2>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:717:5: note: candidate: 'template<class _T1, class _T2> typename std::enable_if<(! std::__and_<std::__is_swappable<_T1>, std::__is_swappable<_T2> >::value)>::type std::swap(pair<_T1, _T2>&, pair<_T1, _T2>&)' (deleted)
+  717 |     swap(pair<_T1, _T2>&, pair<_T1, _T2>&) = delete;
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:717:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::pair<_T1, _T2>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/string:53:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/basic_string.h:3857:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> void std::swap(__cxx11::basic_string<_CharT, _Traits, _Allocator>&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 3857 |     swap(basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/basic_string.h:3857:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from nbodyMPIShared.cc:2:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1269:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_filebuf<_CharT, _Traits>&, basic_filebuf<_CharT, _Traits>&)'
+ 1269 |     swap(basic_filebuf<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1269:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_filebuf<_CharT, _Traits>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1276:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_ifstream<_CharT, _Traits>&, basic_ifstream<_CharT, _Traits>&)'
+ 1276 |     swap(basic_ifstream<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1276:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_ifstream<_CharT, _Traits>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1283:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_ofstream<_CharT, _Traits>&, basic_ofstream<_CharT, _Traits>&)'
+ 1283 |     swap(basic_ofstream<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1283:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_ofstream<_CharT, _Traits>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1290:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_fstream<_CharT, _Traits>&, basic_fstream<_CharT, _Traits>&)'
+ 1290 |     swap(basic_fstream<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1290:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_fstream<_CharT, _Traits>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/vector:64,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/random.h:34,
+                 from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/random:49,
+                 from nbodyMPIShared.cc:3:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_vector.h:2109:5: note: candidate: 'template<class _Tp, class _Alloc> void std::swap(vector<_Tp, _Alloc>&, vector<_Tp, _Alloc>&)'
+ 2109 |     swap(vector<_Tp, _Alloc>& __x, vector<_Tp, _Alloc>& __y)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_vector.h:2109:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   mismatched types 'std::vector<_Tp, _Alloc>' and 'double*'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from nbodyMPIShared.cc:6:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1774:5: note: candidate: 'template<class ... _Elements> typename std::enable_if<std::__and_<std::__is_swappable<_Elements>...>::value>::type std::swap(tuple<_UTypes ...>&, tuple<_UTypes ...>&)'
+ 1774 |     swap(tuple<_Elements...>& __x, tuple<_Elements...>& __y)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1774:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::tuple<_UTypes ...>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1783:5: note: candidate: 'template<class ... _Elements> typename std::enable_if<(! std::__and_<std::__is_swappable<_Elements>...>::value)>::type std::swap(tuple<_UTypes ...>&, tuple<_UTypes ...>&)' (deleted)
+ 1783 |     swap(tuple<_Elements...>&, tuple<_Elements...>&) = delete;
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1783:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::tuple<_UTypes ...>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/map:60,
+                 from /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/include/openmpi/ompi/mpi/cxx/mpicxx.h:42,
+                 from /opt/ohpc/pub/mpi/openmpi4-gnu12/4.1.6/include/mpi.h:2911,
+                 from nbodyMPIShared.cc:8:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_tree.h:1680:5: note: candidate: 'template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> void std::swap(_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)'
+ 1680 |     swap(_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_tree.h:1680:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/map:61:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_map.h:1587:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> void std::swap(map<_Key, _Tp, _Compare, _Allocator>&, map<_Key, _Tp, _Compare, _Allocator>&)'
+ 1587 |     swap(map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_map.h:1587:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::map<_Key, _Tp, _Compare, _Allocator>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+In file included from /opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/map:62:
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_multimap.h:1208:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> void std::swap(multimap<_Key, _Tp, _Compare, _Allocator>&, multimap<_Key, _Tp, _Compare, _Allocator>&)'
+ 1208 |     swap(multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_multimap.h:1208:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:141:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::multimap<_Key, _Tp, _Compare, _Allocator>'
+  141 |     std::swap(x, x_next); // Update the positions and velocities
+      |     ~~~~~~~~~^~~~~~~~~~~
+nbodyMPIShared.cc:142:14: error: no matching function for call to 'swap(Vec&, double*&)'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:196:5: note: candidate: 'template<class _Tp> std::_Require<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> > std::swap(_Tp&, _Tp&)'
+  196 |     swap(_Tp& __a, _Tp& __b)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:196:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   deduced conflicting types for parameter '_Tp' ('std::vector<double>' and 'double*')
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:220:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> std::__enable_if_t<std::__is_swappable<_Tp>::value> std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])'
+  220 |     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/move.h:220:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   mismatched types '_Tp [_Nm]' and 'Vec' {aka 'std::vector<double>'}
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:709:5: note: candidate: 'template<class _T1, class _T2> typename std::enable_if<std::__and_<std::__is_swappable<_T1>, std::__is_swappable<_T2> >::value>::type std::swap(pair<_T1, _T2>&, pair<_T1, _T2>&)'
+  709 |     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:709:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::pair<_T1, _T2>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:717:5: note: candidate: 'template<class _T1, class _T2> typename std::enable_if<(! std::__and_<std::__is_swappable<_T1>, std::__is_swappable<_T2> >::value)>::type std::swap(pair<_T1, _T2>&, pair<_T1, _T2>&)' (deleted)
+  717 |     swap(pair<_T1, _T2>&, pair<_T1, _T2>&) = delete;
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_pair.h:717:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::pair<_T1, _T2>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/basic_string.h:3857:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> void std::swap(__cxx11::basic_string<_CharT, _Traits, _Allocator>&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 3857 |     swap(basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/basic_string.h:3857:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1269:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_filebuf<_CharT, _Traits>&, basic_filebuf<_CharT, _Traits>&)'
+ 1269 |     swap(basic_filebuf<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1269:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_filebuf<_CharT, _Traits>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1276:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_ifstream<_CharT, _Traits>&, basic_ifstream<_CharT, _Traits>&)'
+ 1276 |     swap(basic_ifstream<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1276:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_ifstream<_CharT, _Traits>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1283:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_ofstream<_CharT, _Traits>&, basic_ofstream<_CharT, _Traits>&)'
+ 1283 |     swap(basic_ofstream<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1283:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_ofstream<_CharT, _Traits>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1290:5: note: candidate: 'template<class _CharT, class _Traits> void std::swap(basic_fstream<_CharT, _Traits>&, basic_fstream<_CharT, _Traits>&)'
+ 1290 |     swap(basic_fstream<_CharT, _Traits>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/fstream:1290:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::basic_fstream<_CharT, _Traits>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_vector.h:2109:5: note: candidate: 'template<class _Tp, class _Alloc> void std::swap(vector<_Tp, _Alloc>&, vector<_Tp, _Alloc>&)'
+ 2109 |     swap(vector<_Tp, _Alloc>& __x, vector<_Tp, _Alloc>& __y)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_vector.h:2109:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   mismatched types 'std::vector<_Tp, _Alloc>' and 'double*'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1774:5: note: candidate: 'template<class ... _Elements> typename std::enable_if<std::__and_<std::__is_swappable<_Elements>...>::value>::type std::swap(tuple<_UTypes ...>&, tuple<_UTypes ...>&)'
+ 1774 |     swap(tuple<_Elements...>& __x, tuple<_Elements...>& __y)
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1774:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::tuple<_UTypes ...>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1783:5: note: candidate: 'template<class ... _Elements> typename std::enable_if<(! std::__and_<std::__is_swappable<_Elements>...>::value)>::type std::swap(tuple<_UTypes ...>&, tuple<_UTypes ...>&)' (deleted)
+ 1783 |     swap(tuple<_Elements...>&, tuple<_Elements...>&) = delete;
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1783:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::tuple<_UTypes ...>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_tree.h:1680:5: note: candidate: 'template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> void std::swap(_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)'
+ 1680 |     swap(_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_tree.h:1680:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_map.h:1587:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> void std::swap(map<_Key, _Tp, _Compare, _Allocator>&, map<_Key, _Tp, _Compare, _Allocator>&)'
+ 1587 |     swap(map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_map.h:1587:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::map<_Key, _Tp, _Compare, _Allocator>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_multimap.h:1208:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> void std::swap(multimap<_Key, _Tp, _Compare, _Allocator>&, multimap<_Key, _Tp, _Compare, _Allocator>&)'
+ 1208 |     swap(multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/bits/stl_multimap.h:1208:5: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:142:14: note:   'Vec' {aka 'std::vector<double>'} is not derived from 'std::multimap<_Key, _Tp, _Compare, _Allocator>'
+  142 |     std::swap(v, v_next); // By swapping the pointers to the arrays
+      |     ~~~~~~~~~^~~~~~~~~~~
+nbodyMPIShared.cc: In function 'Vec kinetic_energy()':
+nbodyMPIShared.cc:203:19: error: 'n' was not declared in this scope
+  203 |     auto &v_n = v[n]; // Velocities
+      |                   ^
+nbodyMPIShared.cc:212:12: error: could not convert 'KE_n' from 'double' to 'Vec' {aka 'std::vector<double>'}
+  212 |     return KE_n
+      |            ^~~~
+      |            |
+      |            double
+nbodyMPIShared.cc:212:16: error: expected ';' before '}' token
+  212 |     return KE_n
+      |                ^
+      |                ;
+  213 | }
+      | ~               
+nbodyMPIShared.cc: In function 'int main(int, char**)':
+nbodyMPIShared.cc:238:43: error: no match for 'operator=' (operand types are 'std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>' and 'void')
+  238 | std::tie(x[0], v[0]) = initial_conditions(); // Set up initial conditions
+      |                                           ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1304:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<const _U1&, const _U2&>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(const std::tuple<_U1, _U2>&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1304 |         operator=(const tuple<_U1, _U2>& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1304:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:238:43: note:   mismatched types 'const std::tuple<_T1, _T2>' and 'void'
+  238 | std::tie(x[0], v[0]) = initial_conditions(); // Set up initial conditions
+      |                                           ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1314:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<_U1, _U2>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(std::tuple<_U1, _U2>&&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1314 |         operator=(tuple<_U1, _U2>&& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1314:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:238:43: note:   mismatched types 'std::tuple<_T1, _T2>' and 'void'
+  238 | std::tie(x[0], v[0]) = initial_conditions(); // Set up initial conditions
+      |                                           ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1324:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<const _U1&, const _U2&>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(const std::pair<_U1, _U2>&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1324 |         operator=(const pair<_U1, _U2>& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1324:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:238:43: note:   mismatched types 'const std::pair<_T1, _T2>' and 'void'
+  238 | std::tie(x[0], v[0]) = initial_conditions(); // Set up initial conditions
+      |                                           ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1335:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<_U1, _U2>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(std::pair<_U1, _U2>&&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1335 |         operator=(pair<_U1, _U2>&& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1335:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:238:43: note:   mismatched types 'std::pair<_T1, _T2>' and 'void'
+  238 | std::tie(x[0], v[0]) = initial_conditions(); // Set up initial conditions
+      |                                           ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1281:7: note: candidate: 'std::tuple<_T1, _T2>& std::tuple<_T1, _T2>::operator=(std::__conditional_t<__assignable<const _T1&, const _T2&>(), const std::tuple<_T1, _T2>&, const std::__nonesuch&>) [with _T1 = std::vector<double>&; _T2 = std::vector<double>&; std::__conditional_t<__assignable<const _T1&, const _T2&>(), const std::tuple<_T1, _T2>&, const std::__nonesuch&> = const std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&]'
+ 1281 |       operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
+      |       ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1283:52: note:   no known conversion for argument 1 from 'void' to 'std::__conditional_t<true, const std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&, const std::__nonesuch&>' {aka 'const std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&'}
+ 1281 |       operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1282 |                                 const tuple&,
+      |                                 ~~~~~~~~~~~~~       
+ 1283 |                                 const __nonesuch&> __in)
+      |                                 ~~~~~~~~~~~~~~~~~~~^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1292:7: note: candidate: 'std::tuple<_T1, _T2>& std::tuple<_T1, _T2>::operator=(std::__conditional_t<__assignable<_T1, _T2>(), std::tuple<_T1, _T2>&&, std::__nonesuch&&>) [with _T1 = std::vector<double>&; _T2 = std::vector<double>&; std::__conditional_t<__assignable<_T1, _T2>(), std::tuple<_T1, _T2>&&, std::__nonesuch&&> = std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&&]'
+ 1292 |       operator=(__conditional_t<__assignable<_T1, _T2>(),
+      |       ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1294:47: note:   no known conversion for argument 1 from 'void' to 'std::__conditional_t<true, std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&&, std::__nonesuch&&>' {aka 'std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&&'}
+ 1292 |       operator=(__conditional_t<__assignable<_T1, _T2>(),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1293 |                                 tuple&&,
+      |                                 ~~~~~~~~       
+ 1294 |                                 __nonesuch&&> __in)
+      |                                 ~~~~~~~~~~~~~~^~~~
+nbodyMPIShared.cc:244:54: error: no match for 'operator=' (operand types are 'std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>' and 'void')
+  244 |     std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+      |                                                      ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1304:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<const _U1&, const _U2&>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(const std::tuple<_U1, _U2>&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1304 |         operator=(const tuple<_U1, _U2>& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1304:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:244:54: note:   mismatched types 'const std::tuple<_T1, _T2>' and 'void'
+  244 |     std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+      |                                                      ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1314:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<_U1, _U2>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(std::tuple<_U1, _U2>&&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1314 |         operator=(tuple<_U1, _U2>&& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1314:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:244:54: note:   mismatched types 'std::tuple<_T1, _T2>' and 'void'
+  244 |     std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+      |                                                      ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1324:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<const _U1&, const _U2&>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(const std::pair<_U1, _U2>&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1324 |         operator=(const pair<_U1, _U2>& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1324:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:244:54: note:   mismatched types 'const std::pair<_T1, _T2>' and 'void'
+  244 |     std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+      |                                                      ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1335:9: note: candidate: 'template<class _U1, class _U2> std::__enable_if_t<__assignable<_U1, _U2>(), std::tuple<_T1, _T2>&> std::tuple<_T1, _T2>::operator=(std::pair<_U1, _U2>&&) [with _U2 = _U1; _T1 = std::vector<double>&; _T2 = std::vector<double>&]'
+ 1335 |         operator=(pair<_U1, _U2>&& __in)
+      |         ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1335:9: note:   template argument deduction/substitution failed:
+nbodyMPIShared.cc:244:54: note:   mismatched types 'std::pair<_T1, _T2>' and 'void'
+  244 |     std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+      |                                                      ^
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1281:7: note: candidate: 'std::tuple<_T1, _T2>& std::tuple<_T1, _T2>::operator=(std::__conditional_t<__assignable<const _T1&, const _T2&>(), const std::tuple<_T1, _T2>&, const std::__nonesuch&>) [with _T1 = std::vector<double>&; _T2 = std::vector<double>&; std::__conditional_t<__assignable<const _T1&, const _T2&>(), const std::tuple<_T1, _T2>&, const std::__nonesuch&> = const std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&]'
+ 1281 |       operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
+      |       ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1283:52: note:   no known conversion for argument 1 from 'void' to 'std::__conditional_t<true, const std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&, const std::__nonesuch&>' {aka 'const std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&'}
+ 1281 |       operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1282 |                                 const tuple&,
+      |                                 ~~~~~~~~~~~~~       
+ 1283 |                                 const __nonesuch&> __in)
+      |                                 ~~~~~~~~~~~~~~~~~~~^~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1292:7: note: candidate: 'std::tuple<_T1, _T2>& std::tuple<_T1, _T2>::operator=(std::__conditional_t<__assignable<_T1, _T2>(), std::tuple<_T1, _T2>&&, std::__nonesuch&&>) [with _T1 = std::vector<double>&; _T2 = std::vector<double>&; std::__conditional_t<__assignable<_T1, _T2>(), std::tuple<_T1, _T2>&&, std::__nonesuch&&> = std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&&]'
+ 1292 |       operator=(__conditional_t<__assignable<_T1, _T2>(),
+      |       ^~~~~~~~
+/opt/ohpc/pub/compiler/gcc/12.4.0/include/c++/12.4.0/tuple:1294:47: note:   no known conversion for argument 1 from 'void' to 'std::__conditional_t<true, std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&&, std::__nonesuch&&>' {aka 'std::tuple<std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&>&&'}
+ 1292 |       operator=(__conditional_t<__assignable<_T1, _T2>(),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1293 |                                 tuple&&,
+      |                                 ~~~~~~~~       
+ 1294 |                                 __nonesuch&&> __in)
+      |                                 ~~~~~~~~~~~~~~^~~~
+nbodyMPIShared.cc:251:27: error: cannot convert 'Vec' {aka 'std::vector<double>'} to '__gnu_cxx::__alloc_traits<std::allocator<double>, double>::value_type' {aka 'double'} in assignment
+  251 |     KE[n] = kinetic_energy(); // Kinetic energy
+      |             ~~~~~~~~~~~~~~^~
+      |                           |
+      |                           Vec {aka std::vector<double>}
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+
+real	0m0.139s
+user	0m0.008s
+sys	0m0.068s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+
+real	0m0.107s
+user	0m0.011s
+sys	0m0.061s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+
+real	0m0.099s
+user	0m0.015s
+sys	0m0.056s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+8 total processes failed to start
+
+real	0m0.098s
+user	0m0.013s
+sys	0m0.057s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+16 total processes failed to start
+
+real	0m0.085s
+user	0m0.010s
+sys	0m0.059s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+
+real	0m0.086s
+user	0m0.011s
+sys	0m0.058s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+
+real	0m0.088s
+user	0m0.014s
+sys	0m0.055s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+
+real	0m0.115s
+user	0m0.011s
+sys	0m0.060s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+8 total processes failed to start
+
+real	0m0.101s
+user	0m0.010s
+sys	0m0.060s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+16 total processes failed to start
+
+real	0m0.086s
+user	0m0.009s
+sys	0m0.061s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+
+real	0m0.098s
+user	0m0.013s
+sys	0m0.057s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+
+real	0m0.095s
+user	0m0.017s
+sys	0m0.056s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+
+real	0m0.090s
+user	0m0.009s
+sys	0m0.061s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+8 total processes failed to start
+
+real	0m0.088s
+user	0m0.006s
+sys	0m0.063s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+16 total processes failed to start
+
+real	0m0.087s
+user	0m0.010s
+sys	0m0.059s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+
+real	0m0.085s
+user	0m0.009s
+sys	0m0.059s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+
+real	0m0.087s
+user	0m0.010s
+sys	0m0.059s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+
+real	0m0.096s
+user	0m0.010s
+sys	0m0.058s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+8 total processes failed to start
+
+real	0m0.096s
+user	0m0.015s
+sys	0m0.054s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+16 total processes failed to start
+
+real	0m0.086s
+user	0m0.008s
+sys	0m0.061s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+
+real	0m0.099s
+user	0m0.015s
+sys	0m0.056s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+
+real	0m0.093s
+user	0m0.012s
+sys	0m0.059s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+
+real	0m0.095s
+user	0m0.012s
+sys	0m0.058s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+8 total processes failed to start
+
+real	0m0.099s
+user	0m0.012s
+sys	0m0.060s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+16 total processes failed to start
+
+real	0m0.088s
+user	0m0.013s
+sys	0m0.057s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+
+real	0m0.085s
+user	0m0.015s
+sys	0m0.054s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+
+real	0m0.106s
+user	0m0.014s
+sys	0m0.055s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+
+real	0m0.090s
+user	0m0.011s
+sys	0m0.058s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+8 total processes failed to start
+
+real	0m0.096s
+user	0m0.014s
+sys	0m0.055s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+16 total processes failed to start
+
+real	0m0.088s
+user	0m0.011s
+sys	0m0.059s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+
+real	0m0.089s
+user	0m0.014s
+sys	0m0.055s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+
+real	0m0.100s
+user	0m0.010s
+sys	0m0.059s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+4 total processes failed to start
+
+real	0m0.108s
+user	0m0.016s
+sys	0m0.053s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+8 total processes failed to start
+
+real	0m0.099s
+user	0m0.013s
+sys	0m0.056s
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./nbodyMPIShared
+Node: c-10-01
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+16 total processes failed to start
+
+real	0m0.104s
+user	0m0.010s
+sys	0m0.059s
