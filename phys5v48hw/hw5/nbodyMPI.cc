@@ -143,11 +143,11 @@ Vec acceleration(const Vec& x, const Vec& m) {
         }
     }
 
-    if (n_ranks > 1) { // More than one process
-        // Gather acceleration
-        MPI_Allgatherv(a.data() + N_beg, N_local, MPI_DOUBLE, a.data(),
-        countsD.data(), displsD.data(), MPI_DOUBLE, MPI_COMM_WORLD);
-    }
+    //if (n_ranks > 1) { // More than one process
+    //    // Gather acceleration
+    //    MPI_Allgatherv(a.data() + N_beg, N_local, MPI_DOUBLE, a.data(),
+    //    countsD.data(), displsD.data(), MPI_DOUBLE, MPI_COMM_WORLD);
+    //}
 
     return a; // Accelerations
 }
@@ -155,7 +155,7 @@ Vec acceleration(const Vec& x, const Vec& m) {
 // Compute the next position and velocity for all masses
 std::tuple<Vec, Vec> timestep(const Vec& x0, const Vec& v0, const Vec& m) {
     Vec a0 = acceleration(x0, m); // Calculate particle accelerations
-    Vec x1(ND_end - ND_beg), v1(ND_end - ND_beg); // Allocate memory
+    Vec x1(ND), v1(ND); // Allocate memory
     for (int i = ND_beg; i < ND_end; ++i) {
         v1[i] = a0[i] * dt + v0[i]; // New velocity
         x1[i] = v1[i] * dt + x0[i]; // New position
@@ -185,6 +185,10 @@ int main(int argc, char** argv) {
         tNum = std::atoi(argv[2]); // Update the number of threads
 }
 
+std::cout << "Start" << std::endl;
+setup_parallelism();
+std::cout << "Setup Fin" << std::endl;
+
 // Prepare vectors for time points, masses, positions, velocities, and kinetic energy
 Vec t(T+1); // Time points
 for (int i = 0; i <= T; ++i)
@@ -193,16 +197,20 @@ Vec m(N, m_0); // Masses (all equal)
 Vecs x(T+1), v(T+1); // Positions and velocities
 std::tie(x[0], v[0]) = initial_conditions(); // Set up initial conditions
 
+std::cout << "Init Cond Fin" << std::endl;
+
 // Simulate the motion of N masses in D-dimensional space
 for (int n = 0; n < T; ++n)
     std::tie(x[n+1], v[n+1]) = timestep(x[n], v[n], m); // Time step
+
+std::cout << "Timestep Fin" << std::endl;
 
 // Calculate the total kinetic energy of the system
 Vec KE(T+1); // Kinetic energy
 for (int n = 0; n <= T; ++n) {
     double KE_n = 0.; // Kinetic energy
     auto &v_n = v[n]; // Velocities
-    for (int i = N_beg; i < N_end; ++i) {
+    for (int i = 0; i < N_local; ++i) {
         double v2 = 0.; // Velocity magnitude
         for (int j = 0; j < D; ++j) {
             const int k = i * D + j; // Flatten the index
@@ -213,14 +221,25 @@ for (int n = 0; n <= T; ++n) {
     KE[n] = KE_n; // Kinetic energy
 }
 
+std::cout << "KE Fin" << std::endl;
+std::cout << N_beg << std::endl;
+std::cout << N_end << std::endl;
+std::cout << N_local << std::endl;
+std::cout << sizeof(KE.data()) << std::endl;
+std::cout << (T+1) << std::endl;
+
 if (rank == 0) {
+    std::cout << "Rank 0" << std::endl;
     // Reduce the kinetic energies
     MPI_Reduce(MPI_IN_PLACE, KE.data(), T+1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
     // Protected save and print logic ...
 } else {
+    std::cout << "Else" << std::endl;
     // Send the kinetic energies
     MPI_Reduce(KE.data(), NULL, T+1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 }
+
+std::cout << "MPI Red Fin" << std::endl;
 
 // Print the vector to the specified file
 save(KE, "./output/" + keyword + "/KE_" + std::to_string(N) + ".txt", "Kinetic Energy");
@@ -233,6 +252,8 @@ for (int n = 1; n <= T; n += T_skip)
     std::cout << ", " << KE[n];
 std::cout << "]" << std::endl;
 
+MPI_Finalize(); // Finalize MPI 
+
 // Stop timing
 auto end = std::chrono::high_resolution_clock::now();
 double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() / 1000.;
@@ -240,13 +261,18 @@ std::cout << "Runtime = " << elapsed << " s for N = " << N << std::endl;
 
 std::string NStr = std::to_string(N);
 std::string elapsedStr = std::to_string(elapsed);
+std::string tNumStr = std::to_string(tNum);
 
 std::ofstream fileOut;
 fileOut.open(fNameOut, std::ios::out | std::ios::app);
-fileOut << NStr + "," + elapsedStr + ",\n" << std::endl;
+fileOut << NStr + "," + elapsedStr + "," + tNumStr + ",\n" << std::endl;
 fileOut.close();
 
-MPI_Finalize(); // Finalize MPI 
+
+std::cout << "Out Fin" << std::endl;
+
+std::cout << "Fin Fin" << std::endl;
+
 
 return 0;
 

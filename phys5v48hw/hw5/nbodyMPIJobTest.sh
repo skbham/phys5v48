@@ -10,7 +10,7 @@
 
 mpicxx -O3 -std=c++17 nbodyMPI.cc -o nbodyMPI
 
-for ((N=128; N<=256; N*=2)); do
+for ((N=128; N<=5000; N*=2)); do
     for ((tNum=1; tNum<=4; tNum*=2)); do
 
         time mpiexec -n "$tNum" ./nbodyMPI "$N" "$tNum"
