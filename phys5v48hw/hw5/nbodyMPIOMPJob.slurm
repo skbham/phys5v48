@@ -11,5 +11,5 @@
 mpicxx -fopenmp -O3 -std=c++17 nbodyMPIOMP.cc -o nbodyMPIOMP
 
 export OMP_NUM_THREADS=16
-time mpiexec -n 2 ./nbodyMPI "$N" 2
+time mpiexec -n 2 ./nbodyMPI 1000000000 2
 
