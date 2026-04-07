@@ -1,0 +1,1104 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"mpi"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "mpi"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 18, in <module>
+    import mpiLorentz
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/mpiLorentz.py", line 2, in <module>
+    from mpi4py import MPI
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 290, in find_spec
+    mpiabi_suffix = _get_mpiabi_suffix(fullname)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 276, in _get_mpiabi_suffix
+    mpiabi = _get_mpiabi()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 258, in _get_mpiabi
+    mpiabi = _get_mpiabi_from_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 217, in _get_mpiabi_from_libmpi
+    lib = _dlopen_libmpi(libmpi)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/mpi4py/_mpiabi.py", line 210, in _dlopen_libmpi
+    raise RuntimeError("\n".join(errors))
+RuntimeError: cannot load MPI library
+/home/skb190000/.local/lib: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.12: cannot open shared object file: No such file or directory
+/home/skb190000/miniforge3/lib/libmpi.so.40: cannot open shared object file: No such file or directory
+libmpi.so: cannot open shared object file: No such file or directory
+libmpi.so.12: cannot open shared object file: No such file or directory
+libmpi.so.40: cannot open shared object file: No such file or directory
