@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J hw4Mpire
-#SBATCH --output=hw4MpireOut.txt
+#SBATCH -J hw4Numba
+#SBATCH --output=hw4NumbaOut.txt
 #SBATCH -p cpu-preempt
 #SBATCH -N 2 # nodes
 #SBATCH -n 16 # total ranks
@@ -23,7 +23,8 @@ nodes=2
 # baseName="ppeLorentz" # ProcessPoolExecutor
 # baseName="daskLorentz" # Dask
 # baseName="joblibLorentz" # JobLib
-baseName="mpireLorentz" # Mpire
+# baseName="mpireLorentz" # Mpire
+baseName="numbaLorentz" # Numba
 
 fNameCat="output/${baseName}/${baseName}Cat.xlsx"
 
@@ -36,3 +37,4 @@ for ((bins=10; bins<1001; bins*=10)); do
 
 done
 done
+
