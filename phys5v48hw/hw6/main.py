@@ -216,7 +216,7 @@ def main():
 
     return 0
 
-
+main()
 
 # Run a convergence study
 # deltat = 2 ** (-n)
