@@ -98,7 +98,7 @@ def forEuler(y, dydt, h=0.01):
 def main():
 
     nArr = np.array([4,5])
-    hArr = np.array(2 ** (-n))
+    hArr = np.array(2 ** (-nArr))
     nNum = 2
 
     yRk2CpuArr = np.zeros(nNum)
