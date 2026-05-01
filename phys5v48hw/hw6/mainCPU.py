@@ -7,7 +7,6 @@
 # Implicit TRBDF2 method
 
 from calendar import c
-import cupy as cp
 import matplotlib.pyplot as plt
 import numpy as np
 from time import perf_counter
@@ -107,15 +106,8 @@ def main():
     globErrRk2CpuArr = np.zeros(nNum)
     globErrRk4CpuArr = np.zeros(nNum) 
     globErrForEulerCpuArr = np.zeros(nNum)
-
-    yRk2GpuArr = cp.zeros(nNum)
-    yRk4GpuArr = cp.zeros(nNum)
-    yForEulerGpuArr = cp.zeros(nNum)
-    globErrRk2GpuArr = cp.zeros(nNum)
-    globErrRk4GpuArr = cp.zeros(nNum) 
-    globErrForEulerGpuArr = cp.zeros(nNum)
-
-    fname = "hw6Data.xlsx"
+    
+    fname = "hw6CPUData.xlsx"
 
     # Run CPU implementations
 
@@ -149,45 +141,13 @@ def main():
     end = perf_counter() # Stop timer
     tForEulerCpu = end - start # Calculate time
 
-    # Run GPU implementations
-
-    # Run RK2 on GPU
-    start = perf_counter() # Start timer
-    for i in range(0, nNum):
-
-        yRk2CpuArr[i] = rk2(y, dydt, h=hArr[i])
-        globErrRk2GpuArr[i] = np.abs(yRk2CpuArr[i] - np.exp(-1))
-
-    end = perf_counter() # Stop timer
-    tRk2Gpu = end - start # Calculate time
-
-    # Run RK4 on GPU
-    start = perf_counter() # Start timer
-    for i in range(0, nNum):
-
-        yRk4CpuArr[i] = rk4(y, dydt, h=hArr[i])
-        globErrRk4GpuArr[i] = np.abs(yRk4CpuArr[i] - np.exp(-1))
-
-    end = perf_counter() # Stop timer
-    tRk4Gpu = end - start # Calculate time
-
-    # Run Forward Euler on GPU
-    start = perf_counter() # Start timer
-    for i in range(0, nNum):
-
-        yForEulerCpuArr[i] = forEuler(y, dydt, h=hArr[i])
-        globErrForEulerGpuArr[i] = np.abs(yForEulerCpuArr[i] - np.exp(-1))
-
-    end = perf_counter() # Stop timer
-    tForEulerGpu = end - start # Calculate time
-
     # Plot CPU graphs
     #plt.figure()
     plt.plot(globErrRk2CpuArr, hArr)
     plt.plot(globErrRk4CpuArr, hArr)
     plt.plot(globErrForEulerCpuArr, hArr)
 
-    plt.show()
+    plt.savefig()
 
     # Plot GPU graphs
     #plt.figure()
@@ -195,7 +155,7 @@ def main():
     plt.plot(globErrRk4CpuArr, hArr)
     plt.plot(globErrForEulerCpuArr, hArr)
 
-    plt.show()
+    plt.savefig()
 
     writer = pd.ExcelWriter(fname, engine='openpyxl', mode='a')
     #df = pd.read_excel(writer, index_col=0) # Read in catalog
@@ -204,10 +164,10 @@ def main():
     colList = ["Method", "CPU Time (s)", "GPU Time (s)", "Speedup (CPU/GPU)"]
     rowNames = np.array(["RK2", "RK4", "Forward Euler"])
     cpuTimes = np.array([tRk2Cpu, tRk4Cpu, tForEulerCpu])
-    gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
-    speedup = cpuTimes / gpuTimes
+    #gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
+    #speedup = cpuTimes / gpuTimes
 
-    data = np.concatenate(rowName, cpuTimes, gpuTimes, speedup)
+    data = np.concatenate(rowName, cpuTimes)
     print(data)
 
     df = pd.DataFrame(data)
