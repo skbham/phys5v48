@@ -24,15 +24,15 @@ def y(t):
     return np.exp(-t)
 
 def dydt(t, y):
-    return - y(t)
+    return - y
 
 def dydt2(t, y):
     r = 1
-    return r * y(t) * (1 - y(t))
+    return r * y * (1 - y)
 
 def dydt3(t, y):
     alpha = 1
-    return - alpha * y(t)
+    return - alpha * y
 
 # RK2
 def rk2(y, dydt, h=0.01):
