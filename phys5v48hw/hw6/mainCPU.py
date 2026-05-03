@@ -46,6 +46,7 @@ def rk2(y, dydt, h=0.01):
 
         # For the Midpoint Method set:
         a1 = 0
+        a2 = 1
         p1 = 1/2
         q11 = 1/2
 
