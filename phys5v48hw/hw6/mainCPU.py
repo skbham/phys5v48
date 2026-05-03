@@ -148,7 +148,7 @@ def main():
     plt.plot(globErrRk4CpuArr, hArr)
     plt.plot(globErrForEulerCpuArr, hArr)
 
-    plt.savefig()
+    plt.savefig("cpuPlots1.png")
 
     # Plot GPU graphs
     #plt.figure()
@@ -156,7 +156,7 @@ def main():
     plt.plot(globErrRk4CpuArr, hArr)
     plt.plot(globErrForEulerCpuArr, hArr)
 
-    plt.savefig()
+    plt.savefig("cpuPlots2.png")
 
     writer = pd.ExcelWriter(fname, engine='openpyxl', mode='a')
     #df = pd.read_excel(writer, index_col=0) # Read in catalog
