@@ -46,6 +46,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <omp.h> // Added
 
 /*************************************************************************
       COMPILE-TIME PARAMETERS : 
@@ -259,28 +260,34 @@ struct of_state {
 /*************************************************************************
     MACROS
 *************************************************************************/
-/* loop over all active zones */
-#define ZLOOP for(i=0;i<N1;i++)for(j=0;j<N2;j++)
+
+// Modify loops
+
+//omp_set_num_threads(4);
 
 /* loop over all active zones */
-#define IMAGELOOP for(j=0;j<N2;j++)for(i=0;i<N1;i++)
+#define ZLOOP _Pragma("omp parallel for") for(i=0;i<N1;i++)for(j=0;j<N2;j++)
+
+/* loop over all active zones */
+#define IMAGELOOP _Pragma("omp parallel for") for(j=0;j<N2;j++)for(i=0;i<N1;i++)
 
 /* specialty loop */
 extern int istart,istop,jstart,jstop ;
 #define ZSLOOP(istart,istop,jstart,jstop) \
+    _Pragma("omp parallel for") \
         for(i=istart;i<=istop;i++)\
 	for(j=jstart;j<=jstop;j++)
 
 /* loop over Primitive variables */
-#define PLOOP  for(k=0;k<NPR;k++)
+#define PLOOP  _Pragma("omp parallel for") for(k=0;k<NPR;k++)
 /* loop over all Dimensions; second rank loop */
-#define DLOOP  for(j=0;j<NDIM;j++) for(k=0;k<NDIM;k++)
+#define DLOOP  _Pragma("omp parallel for") for(j=0;j<NDIM;j++) for(k=0;k<NDIM;k++)
 /* loop over all Dimensions; first rank loop */
-#define DLOOPA for(j=0;j<NDIM;j++)
+#define DLOOPA _Pragma("omp parallel for") for(j=0;j<NDIM;j++)
 /* loop over all Space dimensions; second rank loop */
-#define SLOOP  for(j=1;j<NDIM;j++) for(k=1;k<NDIM;k++)
+#define SLOOP  _Pragma("omp parallel for") for(j=1;j<NDIM;j++) for(k=1;k<NDIM;k++)
 /* loop over all Space dimensions; first rank loop */
-#define SLOOPA for(j=1;j<NDIM;j++)
+#define SLOOPA _Pragma("omp parallel for") for(j=1;j<NDIM;j++)
 
 
 extern double fval1,fval2;

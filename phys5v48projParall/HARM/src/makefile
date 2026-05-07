@@ -54,7 +54,7 @@ endif
 
 ifeq ($(USEICC),0)
 CC       = gcc
-CCFLAGS  = -g -fcommon
+CCFLAGS  = -g -fcommon -fopenmp
 endif
 
 
