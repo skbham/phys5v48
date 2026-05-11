@@ -1,10 +1,9 @@
 # numba_lorentz.py
 
 from numba import njit, prange, cuda
-#import atomic
 import numpy as np
 
-@njit(parallel=True, nogil=True)
+@njit(parallel=True, nogil=True, nopython=False)
 
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
