@@ -11,8 +11,8 @@ Also make sure that all modulefiles written in TCL start with the string
 
 
 Total samples: 10000000
-Runtime: 0.305 seconds
-Samples per second: 32802340
+Runtime: 0.488 seconds
+Samples per second: 20490615
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -25,16 +25,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -43,8 +43,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39072901
+Runtime: 0.425 seconds
+Samples per second: 23510923
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -57,16 +57,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -75,8 +75,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.258 seconds
-Samples per second: 38733969
+Runtime: 0.412 seconds
+Samples per second: 24285916
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -89,16 +89,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -107,8 +107,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39134513
+Runtime: 0.426 seconds
+Samples per second: 23468393
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -121,16 +121,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -139,8 +139,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39357785
+Runtime: 0.417 seconds
+Samples per second: 23967808
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -153,16 +153,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -171,8 +171,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.255 seconds
-Samples per second: 39181819
+Runtime: 0.418 seconds
+Samples per second: 23897289
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -185,16 +185,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -203,8 +203,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39001471
+Runtime: 0.419 seconds
+Samples per second: 23891408
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -217,16 +217,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -235,8 +235,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39086373
+Runtime: 0.395 seconds
+Samples per second: 25318535
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -249,16 +249,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -267,8 +267,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.273 seconds
-Samples per second: 36649272
+Runtime: 0.422 seconds
+Samples per second: 23694009
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -281,16 +281,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -299,8 +299,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39059256
+Runtime: 0.423 seconds
+Samples per second: 23641869
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -313,16 +313,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -331,8 +331,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.252 seconds
-Samples per second: 39691650
+Runtime: 0.436 seconds
+Samples per second: 22929003
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -345,16 +345,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -363,8 +363,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.250 seconds
-Samples per second: 39939172
+Runtime: 0.434 seconds
+Samples per second: 23046108
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -377,16 +377,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -395,8 +395,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.253 seconds
-Samples per second: 39532729
+Runtime: 0.427 seconds
+Samples per second: 23439304
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -409,16 +409,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -427,8 +427,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.255 seconds
-Samples per second: 39241351
+Runtime: 0.434 seconds
+Samples per second: 23023223
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -441,16 +441,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -459,8 +459,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.259 seconds
-Samples per second: 38563242
+Runtime: 0.426 seconds
+Samples per second: 23473751
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -473,16 +473,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -491,8 +491,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39318971
+Runtime: 0.435 seconds
+Samples per second: 22965210
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -505,16 +505,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -523,8 +523,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39049292
+Runtime: 0.411 seconds
+Samples per second: 24356968
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -537,16 +537,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -555,8 +555,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.255 seconds
-Samples per second: 39244436
+Runtime: 0.431 seconds
+Samples per second: 23209085
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -569,16 +569,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -587,8 +587,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39346450
+Runtime: 0.430 seconds
+Samples per second: 23273399
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -601,16 +601,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -619,8 +619,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.257 seconds
-Samples per second: 38933518
+Runtime: 0.429 seconds
+Samples per second: 23283011
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -633,16 +633,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -651,8 +651,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39061584
+Runtime: 0.430 seconds
+Samples per second: 23271526
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -665,16 +665,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -683,8 +683,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39428673
+Runtime: 0.422 seconds
+Samples per second: 23711530
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -697,16 +697,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -715,8 +715,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39071154
+Runtime: 0.433 seconds
+Samples per second: 23074787
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -729,16 +729,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -747,8 +747,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.252 seconds
-Samples per second: 39606382
+Runtime: 0.437 seconds
+Samples per second: 22905925
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -761,16 +761,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -779,8 +779,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.255 seconds
-Samples per second: 39253214
+Runtime: 0.432 seconds
+Samples per second: 23151551
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -793,16 +793,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -811,8 +811,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.259 seconds
-Samples per second: 38633466
+Runtime: 0.434 seconds
+Samples per second: 23056939
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -825,16 +825,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -843,8 +843,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.257 seconds
-Samples per second: 38899179
+Runtime: 0.420 seconds
+Samples per second: 23798712
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -857,16 +857,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -875,8 +875,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.255 seconds
-Samples per second: 39139223
+Runtime: 0.436 seconds
+Samples per second: 22942047
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -889,16 +889,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -907,8 +907,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39377664
+Runtime: 0.433 seconds
+Samples per second: 23095650
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -921,16 +921,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -939,8 +939,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39388018
+Runtime: 0.430 seconds
+Samples per second: 23249043
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -953,16 +953,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -971,8 +971,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.258 seconds
-Samples per second: 38827520
+Runtime: 0.429 seconds
+Samples per second: 23301236
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -985,16 +985,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1003,8 +1003,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.255 seconds
-Samples per second: 39270487
+Runtime: 0.415 seconds
+Samples per second: 24108936
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1017,16 +1017,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1035,8 +1035,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.253 seconds
-Samples per second: 39560583
+Runtime: 0.432 seconds
+Samples per second: 23146926
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1049,16 +1049,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1067,8 +1067,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.257 seconds
-Samples per second: 38965021
+Runtime: 0.437 seconds
+Samples per second: 22908865
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1081,16 +1081,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1099,8 +1099,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39383284
+Runtime: 0.435 seconds
+Samples per second: 23008307
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1113,16 +1113,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1131,8 +1131,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.258 seconds
-Samples per second: 38685882
+Runtime: 0.433 seconds
+Samples per second: 23079675
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1145,16 +1145,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1163,8 +1163,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.255 seconds
-Samples per second: 39187859
+Runtime: 0.438 seconds
+Samples per second: 22828915
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1177,16 +1177,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1195,8 +1195,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39054710
+Runtime: 0.421 seconds
+Samples per second: 23756790
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1209,16 +1209,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1227,8 +1227,8 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
 During: Pass nopython_type_inference
 Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39369791
+Runtime: 0.426 seconds
+Samples per second: 23500740
 Results saved to lorentzian_histogram.txt
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
@@ -1241,48 +1241,16 @@ Traceback (most recent call last):
 numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
 Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
 
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
             ^
 
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
+During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (24)
 
-File "numbaLorentz.py", line 26:
-def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
-    <source elided>
-        if 0 <= ix < bins:
-            cuda.atomic.add(counts, ix, 1) # Atomic increment
-            ^
-
-During: Pass nopython_type_inference
-Total samples: 10000000
-Runtime: 0.254 seconds
-Samples per second: 39388092
-Results saved to lorentzian_histogram.txt
-Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
-    counts = numbaLorentz.lorentzian_histogram_numba(args['n'], bins=args['bins']) # Numba
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/core/dispatcher.py", line 424, in _compile_for_args
-    error_rewrite(e, 'typing')
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/core/dispatcher.py", line 365, in error_rewrite
-    raise e.with_traceback(None)
-numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
-Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
-
-File "numbaLorentz.py", line 26:
-def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
-    <source elided>
-        if 0 <= ix < bins:
-            cuda.atomic.add(counts, ix, 1) # Atomic increment
-            ^
-
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
-
-File "numbaLorentz.py", line 26:
+File "numbaLorentz.py", line 24:
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
     <source elided>
         if 0 <= ix < bins:
@@ -1290,67 +1258,4 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
             ^
 
 During: Pass nopython_type_inference
-Total samples: 10000000
-Runtime: 0.256 seconds
-Samples per second: 39016128
-Results saved to lorentzian_histogram.txt
-Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
-    counts = numbaLorentz.lorentzian_histogram_numba(args['n'], bins=args['bins']) # Numba
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/core/dispatcher.py", line 424, in _compile_for_args
-    error_rewrite(e, 'typing')
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/core/dispatcher.py", line 365, in error_rewrite
-    raise e.with_traceback(None)
-numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
-Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
-
-File "numbaLorentz.py", line 26:
-def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
-    <source elided>
-        if 0 <= ix < bins:
-            cuda.atomic.add(counts, ix, 1) # Atomic increment
-            ^
-
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
-
-File "numbaLorentz.py", line 26:
-def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
-    <source elided>
-        if 0 <= ix < bins:
-            cuda.atomic.add(counts, ix, 1) # Atomic increment
-            ^
-
-During: Pass nopython_type_inference
-Total samples: 10000000
-Runtime: 0.253 seconds
-Samples per second: 39584441
-Results saved to lorentzian_histogram.txt
-Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/main.py", line 44, in <module>
-    counts = numbaLorentz.lorentzian_histogram_numba(args['n'], bins=args['bins']) # Numba
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/core/dispatcher.py", line 424, in _compile_for_args
-    error_rewrite(e, 'typing')
-    ~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/core/dispatcher.py", line 365, in error_rewrite
-    raise e.with_traceback(None)
-numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
-Unknown attribute 'atomic' of type Module(<module 'numba.cuda' from '/home/skb190000/miniforge3/lib/python3.13/site-packages/numba/cuda/__init__.py'>)
-
-File "numbaLorentz.py", line 26:
-def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
-    <source elided>
-        if 0 <= ix < bins:
-            cuda.atomic.add(counts, ix, 1) # Atomic increment
-            ^
-
-During: typing of get attribute at /scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw4/numbaLorentz.py (26)
-
-File "numbaLorentz.py", line 26:
-def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
-    <source elided>
-        if 0 <= ix < bins:
-            cuda.atomic.add(counts, ix, 1) # Atomic increment
-            ^
-
-During: Pass nopython_type_inference
+slurmstepd-g-03-06: error: *** JOB 3657491 ON g-03-06 CANCELLED AT 2026-05-11T11:42:06 DUE TO TIME LIMIT ***
