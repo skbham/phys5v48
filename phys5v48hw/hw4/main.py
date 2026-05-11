@@ -39,7 +39,6 @@ start = perf_counter() # Start timer
 #counts = mpLorentz.run_multiproc(args['n'], n_cores=args['nP'], bins=args['bins']) # Multiprocessing
 #counts = ppeLorentz.run_ppe(args['n'], max_workers=args['nP'], bins=args['bins']) # ProcessPoolExecutor
 #counts = daskLorentz.run_dask(args['n'], n_tasks=args['nP'], bins=args['bins']) # Dask
-#counts = numbaLorentz.lorentzian_histogram_numba(args['n'], n_tasks=args['nP'], bins=args['bins']) # Numba
 #counts = joblibLorentz.run_joblib(args['n'], n_jobs=args['nP'], bins=args['bins']) # Joblib
 #counts = mpireLorentz.run_mpire(args['n'], n_jobs=args['nP'], bins=args['bins']) # Mpire
 counts = numbaLorentz.lorentzian_histogram_numba(args['n'], bins=args['bins']) # Numba
