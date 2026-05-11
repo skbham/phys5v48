@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from time import perf_counter
 
-@njit(parallel=True, nogil=True, nopython=False)
+@njit(parallel=True, nogil=True)
 
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
@@ -22,6 +22,7 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
         u = np.random.random() # Uniform(0,1)
         x = 1. / np.tan(np.pi * u) # x = 1/tan(pi*u)
         ix = int((x - xmin) * xfac) # Map x to bin index
+        counts = counts.astype(float)
         if 0 <= ix < bins:
             cuda.atomic.add(counts, ix, 1) # Atomic increment
 
