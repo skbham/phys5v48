@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J hw4Numba
 #SBATCH --output=hw4NumbaOut.txt
-#SBATCH -p gpu-preempt
+#SBATCH -p cpu-preempt
 #SBATCH -N 2 # nodes
 #SBATCH -n 16 # total ranks
 #SBATCH -c 1 # CPUs per rank
