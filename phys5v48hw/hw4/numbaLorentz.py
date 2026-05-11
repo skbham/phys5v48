@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from time import perf_counter
 
-@njit(parallel=True, nogil=True)
+@njit(parallel=True, nogil=True, nopython=False)
 
 def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
 
