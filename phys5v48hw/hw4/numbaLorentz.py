@@ -1,7 +1,7 @@
 # numba_lorentz.py
 
-from numba import njit, prange
-import atomic
+from numba import njit, prange, cuda
+#import atomic
 import numpy as np
 import pandas as pd
 from time import perf_counter
@@ -23,7 +23,7 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
         x = 1. / np.tan(np.pi * u) # x = 1/tan(pi*u)
         ix = int((x - xmin) * xfac) # Map x to bin index
         if 0 <= ix < bins:
-            atomic.add(counts, ix, 1) # Atomic increment
+            cuda.atomic.add(counts, ix, 1) # Atomic increment
 
     return counts
 
