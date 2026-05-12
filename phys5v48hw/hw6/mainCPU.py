@@ -175,7 +175,8 @@ def main():
     data = np.stack((rowNames, cpuTimes), axis=-1)
     print(data)
 
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data,columns=colList)
+    print(df)
 
     df.to_excel(excel_writer=fname, columns=colList, engine='openpyxl')
 
