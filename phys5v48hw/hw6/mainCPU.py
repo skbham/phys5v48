@@ -172,7 +172,7 @@ def main():
     #gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
     #speedup = cpuTimes / gpuTimes
 
-    data = np.concatenate((rowNames.T, cpuTimes.T), axis=0)
+    data = np.stack((rowNames, cpuTimes), axis=-1)
     print(data)
 
     df = pd.DataFrame(data)
