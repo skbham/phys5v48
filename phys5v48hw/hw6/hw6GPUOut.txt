@@ -1,1 +1,36 @@
-slurmstepd-g-01-07: error: *** JOB 3658271 ON g-01-07 CANCELLED AT 2026-05-12T05:20:33 ***
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 210, in <module>
+    main()
+    ~~~~^^
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 151, in main
+    plt.plot(hArr, globErrRk2Arr, label="RK2")
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/pyplot.py", line 3838, in plot
+    return gca().plot(
+           ~~~~~~~~~~^
+        *args,
+        ^^^^^^
+    ...<3 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_axes.py", line 1779, in plot
+    self.add_line(line)
+    ~~~~~~~~~~~~~^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 2417, in add_line
+    self._update_line_limits(line)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 2440, in _update_line_limits
+    path = line.get_path()
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/lines.py", line 1052, in get_path
+    self.recache()
+    ~~~~~~~~~~~~^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/lines.py", line 689, in recache
+    x = _to_unmasked_float_array(xconv).ravel()
+        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/cbook.py", line 1355, in _to_unmasked_float_array
+    return np.asarray(x, float)
+           ~~~~~~~~~~^^^^^^^^^^
+  File "cupy/_core/core.pyx", line 1699, in cupy._core.core._ndarray_base.__array__
+TypeError: Implicit conversion to a NumPy array is not allowed. Please use `.get()` to construct a NumPy array explicitly.
