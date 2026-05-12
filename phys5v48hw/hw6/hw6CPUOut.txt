@@ -1,21 +1,10 @@
-print(tRk2Cpu): 0.0013381970347836614
-print(tRk4Cpu): 9.227904956787825e-05
-print(tForEulerCpu): 2.2280029952526093e-05
-['RK2' 'RK4' 'Forward Euler' '0.0013381970347836614'
- '9.227904956787825e-05' '2.2280029952526093e-05']
+print(tRk2Cpu): 0.0012687190901488066
+print(tRk4Cpu): 0.0003032360691577196
+print(tForEulerCpu): 7.302896119654179e-05
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 184, in <module>
     main()
     ~~~~^^
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 180, in main
-    df.to_excel(excel_writer=fname, columns=colList, engine='openpyxl')
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/pandas/core/generic.py", line 2300, in to_excel
-    formatter = ExcelFormatter(
-        df,
-    ...<8 lines>...
-        autofilter=autofilter,
-    )
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/pandas/io/formats/excel.py", line 570, in __init__
-    raise KeyError("passes columns are not ALL present dataframe")
-KeyError: 'passes columns are not ALL present dataframe'
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 175, in main
+    data = np.concatenate((rowNames, cpuTimes), axis=1)
+numpy.exceptions.AxisError: axis 1 is out of bounds for array of dimension 1
