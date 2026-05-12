@@ -160,9 +160,9 @@ def main():
     # Plot CPU graphs
 
     # Error plots
-    plt.plot(globErrRk2CpuArr, hArr, label="RK2")
-    plt.plot(globErrRk4CpuArr, hArr, label="RK4")
-    plt.plot(globErrForEulerCpuArr, hArr, label="Forward Euler")
+    plt.plot(hArr, globErrRk2CpuArr, label="RK2")
+    plt.plot(hArr, globErrRk4CpuArr, label="RK4")
+    plt.plot(hArr, globErrForEulerCpuArr, label="Forward Euler")
 
     plt.xscale("log")
     plt.yscale("log")
@@ -177,9 +177,9 @@ def main():
     plt.close()
 
     # Runtime plots
-    plt.plot(tRk2Cpu, hArr, label="RK2")
-    plt.plot(tRk4Cpu, hArr, label="RK4")
-    plt.plot(tForEulerCpu, hArr, label="Forward Euler")
+    plt.plot(hArr, tRk2Cpu, label="RK2")
+    plt.plot(hArr, tRk4Cpu, label="RK4")
+    plt.plot(hArr, tForEulerCpu, label="Forward Euler")
 
     plt.xscale("log")
     plt.yscale("log")
