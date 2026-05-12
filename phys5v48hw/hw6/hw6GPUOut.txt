@@ -1,0 +1,1 @@
+slurmstepd-g-01-07: error: *** JOB 3658271 ON g-01-07 CANCELLED AT 2026-05-12T05:20:33 ***
