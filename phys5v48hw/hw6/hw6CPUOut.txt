@@ -1,36 +1,10 @@
-print(tRk2Cpu): 0.0012766079744324088
-print(tRk4Cpu): 9.148300159722567e-05
-print(tForEulerCpu): 2.210203092545271e-05
-Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 186, in <module>
-    main()
-    ~~~~^^
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 151, in main
-    plt.plot(globErrRk2CpuArr, hArr, label="RK2")
-    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/pyplot.py", line 3838, in plot
-    return gca().plot(
-           ~~~~~~~~~~^
-        *args,
-        ^^^^^^
-    ...<3 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_axes.py", line 1777, in plot
-    lines = [*self._get_lines(self, *args, data=data, **kwargs)]
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 297, in __call__
-    yield from self._plot_args(
-               ~~~~~~~~~~~~~~~^
-        axes, this, kwargs, ambiguous_fmt_datakey=ambiguous_fmt_datakey,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        return_kwargs=return_kwargs
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 494, in _plot_args
-    raise ValueError(f"x and y must have same first dimension, but "
-                     f"have shapes {x.shape} and {y.shape}")
-ValueError: x and y must have same first dimension, but have shapes (2,) and (7,)
+print(tRk2Cpu): 0.002695786999538541
+print(tRk4Cpu): 0.0032033369643613696
+print(tForEulerCpu): 0.0004874500446021557
+[['RK2' '0.002695786999538541']
+ ['RK4' '0.0032033369643613696']
+ ['Forward Euler' '0.0004874500446021557']]
+          Method           CPU Time (s)
+0            RK2   0.002695786999538541
+1            RK4  0.0032033369643613696
+2  Forward Euler  0.0004874500446021557
