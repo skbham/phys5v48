@@ -2,7 +2,7 @@
 
 from numba import njit, prange
 import numpy as np
-import atomics
+import atomics.add as add
 
 @njit(parallel=True, nogil=True, nopython=False)
 
@@ -21,7 +21,7 @@ def lorentzian_histogram_numba(n, bins=100, xmin=-10, xmax=10):
         x = 1. / np.tan(np.pi * u) # x = 1/tan(pi*u)
         ix = int((x - xmin) * xfac) # Map x to bin index
         if 0 <= ix < bins:
-            atomics.add(counts, ix, 1) # Atomic increment
+            add(counts, ix, 1) # Atomic increment
 
     return counts
 
