@@ -9,6 +9,7 @@
 #from calendar import c
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from time import perf_counter
 
 # dudt = f(t,u)
