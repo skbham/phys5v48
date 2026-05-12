@@ -148,25 +148,20 @@ def main():
 
     # Plot CPU graphs
     #plt.figure()
-    plt.plot(globErrRk2CpuArr, hArr)
-    plt.plot(globErrRk4CpuArr, hArr)
-    plt.plot(globErrForEulerCpuArr, hArr)
+    plt.plot(globErrRk2CpuArr, hArr, label="RK2")
+    plt.plot(globErrRk4CpuArr, hArr, label="RK4")
+    plt.plot(globErrForEulerCpuArr, hArr, label="Forward Euler")
 
     plt.xscale("log")
     plt.yscale("log")
+
+    plt.title("Error Vs. Step Size")
+    plt.xlabel("Step Size")
+    plt.ylabel("Error")
+
+    plt.legend()
 
     plt.savefig("cpuPlots1.png")
-
-    # Plot GPU graphs
-    #plt.figure()
-    plt.plot(globErrRk2CpuArr, hArr)
-    plt.plot(globErrRk4CpuArr, hArr)
-    plt.plot(globErrForEulerCpuArr, hArr)
-
-    plt.xscale("log")
-    plt.yscale("log")
-    
-    plt.savefig("cpuPlots2.png")
 
     writer = pd.ExcelWriter(fname, engine='openpyxl', mode='a')
     #df = pd.read_excel(writer, index_col=0) # Read in catalog
