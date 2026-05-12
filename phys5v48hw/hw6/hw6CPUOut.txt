@@ -1,10 +1,21 @@
-print(tRk2Cpu): 0.0018289190484210849
-print(tRk4Cpu): 9.158393368124962e-05
-print(tForEulerCpu): 2.2576074115931988e-05
+print(tRk2Cpu): 0.0011054499773308635
+print(tRk4Cpu): 8.98230355232954e-05
+print(tForEulerCpu): 2.187304198741913e-05
+['RK2' 'RK4' 'Forward Euler' '0.0011054499773308635'
+ '8.98230355232954e-05' '2.187304198741913e-05']
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 184, in <module>
     main()
     ~~~~^^
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 175, in main
-    data = np.concatenate(rowNames, cpuTimes)
-TypeError: only integer scalar arrays can be converted to a scalar index
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 180, in main
+    df.to_excel(excel_writer=fname, columns=colList, engine='openpyxl')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/pandas/core/generic.py", line 2300, in to_excel
+    formatter = ExcelFormatter(
+        df,
+    ...<8 lines>...
+        autofilter=autofilter,
+    )
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/pandas/io/formats/excel.py", line 570, in __init__
+    raise KeyError("passes columns are not ALL present dataframe")
+KeyError: 'passes columns are not ALL present dataframe'
