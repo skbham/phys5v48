@@ -100,7 +100,7 @@ def main():
 
     nArr = np.array([4,5,6,7,8,9,10])
     hArr = np.array(2.0 ** (-nArr))
-    nNum = 2
+    nNum = len(nArr)
 
     yRk2CpuArr = np.zeros(nNum)
     yRk4CpuArr = np.zeros(nNum)
