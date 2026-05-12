@@ -6,9 +6,7 @@
 # Explicit Runge-Kutta methods
 # Implicit TRBDF2 method
 
-from calendar import c
 import matplotlib.pyplot as plt
-import numpy as np
 import cupy as cp
 import pandas as pd
 from time import perf_counter
@@ -184,7 +182,7 @@ def main():
     #df = pd.read_excel(writer, index_col=0) # Read in catalog
 
     # Write to the catalog
-    colList = ["Method", "n", "CPU Global Error", "CPU Time (s)"]
+    colList = ["Method", "n", "GPU Global Error", "GPU Time (s)"]
     
     labRk2 = cp.full(nNum, "RK2")
     labRk4 = cp.full(nNum, "RK4")
