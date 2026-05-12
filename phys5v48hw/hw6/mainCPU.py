@@ -166,13 +166,13 @@ def main():
     #df = pd.read_excel(writer, index_col=0) # Read in catalog
 
     # Write to the catalog
-    colList = ["Method", "CPU Time (s)", "GPU Time (s)", "Speedup (CPU/GPU)"]
+    colList = ["Method", "CPU Time (s)"]
     rowNames = np.array(["RK2", "RK4", "Forward Euler"])
     cpuTimes = np.array([tRk2Cpu, tRk4Cpu, tForEulerCpu])
     #gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
     #speedup = cpuTimes / gpuTimes
 
-    data = np.concatenate((rowNames, cpuTimes.T))
+    data = np.concatenate((rowNames, cpuTimes), axis=1)
     print(data)
 
     df = pd.DataFrame(data)
