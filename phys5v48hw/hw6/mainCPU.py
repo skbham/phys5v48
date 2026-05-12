@@ -204,7 +204,7 @@ def main():
     rowNames = np.concatenate((labRk2, labRk4, labForEuler))
     errors = np.concatenate((globErrRk2CpuArr, globErrRk4CpuArr, globErrForEulerCpuArr))
     times = np.concatenate((tRk2Cpu, tRk4Cpu, tForEulerCpu))
-    nTot = np.concatenate((nArr, nArr, NumpyArrayT))
+    nTot = np.concatenate((nArr, nArr, nArr))
     #gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
     #speedup = cpuTimes / gpuTimes
 
