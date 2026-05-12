@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J hw6
-#SBATCH --output=hw6Out.txt
+#SBATCH -J hw6CPU
+#SBATCH --output=hw6CPUOut.txt
 #SBATCH -p cpu-preempt
 #SBATCH -N 1 # nodes
 #SBATCH -n 16 # total ranks
@@ -8,5 +8,5 @@
 #SBATCH -t 00:05:00 # walltime
 #SBATCH --exclusive # avoid interference
 
-python main.py
+python mainCPU.py
 

@@ -6,7 +6,7 @@
 # Explicit Runge-Kutta methods
 # Implicit TRBDF2 method
 
-from calendar import c
+#from calendar import c
 import matplotlib.pyplot as plt
 import numpy as np
 from time import perf_counter
@@ -121,6 +121,7 @@ def main():
 
     end = perf_counter() # Stop timer
     tRk2Cpu = end - start # Calculate time
+    print("print(tRk2Cpu): " + str(tRk2Cpu))
 
     # Run RK4 on CPU
     start = perf_counter() # Start timer
@@ -131,6 +132,7 @@ def main():
 
     end = perf_counter() # Stop timer
     tRk4Cpu = end - start # Calculate time
+    print("print(tRk4Cpu): " + str(tRk4Cpu))
 
     # Run Forward Euler on CPU
     start = perf_counter() # Start timer
@@ -141,6 +143,7 @@ def main():
 
     end = perf_counter() # Stop timer
     tForEulerCpu = end - start # Calculate time
+    print("print(tForEulerCpu): " + str(tForEulerCpu))
 
     # Plot CPU graphs
     #plt.figure()
