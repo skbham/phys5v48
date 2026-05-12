@@ -1,10 +1,10 @@
-print(tRk2Cpu): 0.0012687190901488066
-print(tRk4Cpu): 0.0003032360691577196
-print(tForEulerCpu): 7.302896119654179e-05
+print(tRk2Cpu): 0.0012353940401226282
+print(tRk4Cpu): 0.00030650198459625244
+print(tForEulerCpu): 9.207194671034813e-05
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 184, in <module>
     main()
     ~~~~^^
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 175, in main
-    data = np.concatenate((rowNames, cpuTimes), axis=1)
+    data = np.concatenate((rowNames, cpuTimes.T), axis=1)
 numpy.exceptions.AxisError: axis 1 is out of bounds for array of dimension 1
