@@ -6,24 +6,10 @@
 # Explicit Runge-Kutta methods
 # Implicit TRBDF2 method
 
-#from calendar import c
-from copy import Error
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from time import perf_counter
-
-from pandas.core.dtypes.cast import NumpyArrayT
-from pandas.core.series import nargsort
-
-# dudt = f(t,u)
-# t in [t0, tf]
-# u(t0) = u0
-
-# dydt = -y
-# t in [0,1]
-# y(0) = 1
-# y(t) = e^(-t)
 
 def y(t):
     return np.exp(-t)
@@ -32,7 +18,7 @@ def dydt(t, y):
     return - y
 
 def dydt2(t, y):
-    r = 1
+    r = 2
     return r * y * (1 - y)
 
 def dydt3(t, y):
@@ -106,16 +92,16 @@ def main():
     hArr = np.array(2.0 ** (-nArr))
     nNum = len(nArr)
 
-    yRk2CpuArr = np.zeros(nNum)
-    yRk4CpuArr = np.zeros(nNum)
-    yForEulerCpuArr = np.zeros(nNum)
-    globErrRk2CpuArr = np.zeros(nNum)
-    globErrRk4CpuArr = np.zeros(nNum) 
-    globErrForEulerCpuArr = np.zeros(nNum)
+    yRk2Arr = np.zeros(nNum)
+    yRk4Arr = np.zeros(nNum)
+    yForEulerArr = np.zeros(nNum)
+    globErrRk2Arr = np.zeros(nNum)
+    globErrRk4Arr = np.zeros(nNum) 
+    globErrForEulerArr = np.zeros(nNum)
     
-    tRk2Cpu = np.zeros(nNum)
-    tRk4Cpu = np.zeros(nNum)
-    tForEulerCpu = np.zeros(nNum)
+    tRk2 = np.zeros(nNum)
+    tRk4 = np.zeros(nNum)
+    tForEuler = np.zeros(nNum)
 
     fname = "hw6CPUData.xlsx"
 
@@ -125,11 +111,11 @@ def main():
     for i in range(0, nNum):
 
         start = perf_counter() # Start timer
-        yRk2CpuArr[i] = rk2(y, dydt, h=hArr[i])
+        yRk2Arr[i] = rk2(y, dydt, h=hArr[i])
         end = perf_counter() # Stop timer
-        tRk2Cpu[i] = end - start # Calculate time
+        tRk2[i] = end - start # Calculate time
 
-        globErrRk2CpuArr[i] = np.abs(yRk2CpuArr[i] - np.exp(-1))
+        globErrRk2Arr[i] = np.abs(yRk2Arr[i] - np.exp(-1))
 
     #print("print(tRk2Cpu): " + str(tRk2Cpu))
 
@@ -137,11 +123,11 @@ def main():
     for i in range(0, nNum):
 
         start = perf_counter() # Start timer
-        yRk4CpuArr[i] = rk4(y, dydt, h=hArr[i])
+        yRk4Arr[i] = rk4(y, dydt, h=hArr[i])
         end = perf_counter() # Stop timer
-        tRk4Cpu[i] = end - start # Calculate time
+        tRk4[i] = end - start # Calculate time
 
-        globErrRk4CpuArr[i] = np.abs(yRk4CpuArr[i] - np.exp(-1))
+        globErrRk4Arr[i] = np.abs(yRk4Arr[i] - np.exp(-1))
 
     #print("print(tRk4Cpu): " + str(tRk4Cpu))
 
@@ -149,20 +135,20 @@ def main():
     for i in range(0, nNum):
 
         start = perf_counter() # Start timer
-        yForEulerCpuArr[i] = forEuler(y, dydt, h=hArr[i])
+        yForEulerArr[i] = forEuler(y, dydt, h=hArr[i])
         end = perf_counter() # Stop timer
-        tForEulerCpu[i] = end - start # Calculate time
+        tForEuler[i] = end - start # Calculate time
 
-        globErrForEulerCpuArr[i] = np.abs(yForEulerCpuArr[i] - np.exp(-1))
+        globErrForEulerArr[i] = np.abs(yForEulerArr[i] - np.exp(-1))
 
     #print("print(tForEulerCpu): " + str(tForEulerCpu))
 
     # Plot CPU graphs
 
     # Error plots
-    plt.plot(hArr, globErrRk2CpuArr, label="RK2")
-    plt.plot(hArr, globErrRk4CpuArr, label="RK4")
-    plt.plot(hArr, globErrForEulerCpuArr, label="Forward Euler")
+    plt.plot(hArr, globErrRk2Arr, label="RK2")
+    plt.plot(hArr, globErrRk4Arr, label="RK4")
+    plt.plot(hArr, globErrForEulerArr, label="Forward Euler")
 
     plt.xscale("log")
     plt.yscale("log")
@@ -177,16 +163,16 @@ def main():
     plt.close()
 
     # Runtime plots
-    plt.plot(hArr, tRk2Cpu, label="RK2")
-    plt.plot(hArr, tRk4Cpu, label="RK4")
-    plt.plot(hArr, tForEulerCpu, label="Forward Euler")
+    plt.plot(hArr, tRk2, label="RK2")
+    plt.plot(hArr, tRk4, label="RK4")
+    plt.plot(hArr, tForEuler, label="Forward Euler")
 
     plt.xscale("log")
     plt.yscale("log")
 
     plt.title("Runtime Vs. Step Size")
     plt.xlabel("Step Size")
-    plt.ylabel("Runtime")
+    plt.ylabel("Runtime (s)")
 
     plt.legend()
 
@@ -203,8 +189,8 @@ def main():
     labForEuler = np.full(nNum, "Forward Euler")
 
     rowNames = np.concatenate((labRk2, labRk4, labForEuler))
-    errors = np.concatenate((globErrRk2CpuArr, globErrRk4CpuArr, globErrForEulerCpuArr))
-    times = np.concatenate((tRk2Cpu, tRk4Cpu, tForEulerCpu))
+    errors = np.concatenate((globErrRk2Arr, globErrRk4Arr, globErrForEulerArr))
+    times = np.concatenate((tRk2, tRk4, tForEuler))
     nTot = np.concatenate((nArr, nArr, nArr))
     #gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
     #speedup = cpuTimes / gpuTimes
