@@ -98,7 +98,7 @@ def forEuler(y, dydt, h=0.01):
 
 def main():
 
-    nArr = np.array([4,5])
+    nArr = np.array([4,5,6,7,8,9,10])
     hArr = np.array(2.0 ** (-nArr))
     nNum = 2
 
