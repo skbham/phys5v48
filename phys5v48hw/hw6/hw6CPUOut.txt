@@ -1,11 +1,11 @@
-print(tRk2Cpu): 0.0011715659638866782
-print(tRk4Cpu): 0.0002713430440053344
-print(tForEulerCpu): 6.523309275507927e-05
+print(tRk2Cpu): 0.0019444909412413836
+print(tRk4Cpu): 0.00030375400092452765
+print(tForEulerCpu): 7.18490919098258e-05
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 183, in <module>
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 184, in <module>
     main()
     ~~~~^^
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 164, in main
-    writer = pd.ExcelWriter(fname, engine='openpyxl', mode='a')
-             ^^
-NameError: name 'pd' is not defined. Did you mean: 'id'?
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 175, in main
+    data = np.concatenate(rowName, cpuTimes)
+                          ^^^^^^^
+NameError: name 'rowName' is not defined. Did you mean: 'rowNames'?
