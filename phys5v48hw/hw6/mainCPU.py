@@ -13,6 +13,9 @@ import numpy as np
 import pandas as pd
 from time import perf_counter
 
+from pandas.core.dtypes.cast import NumpyArrayT
+from pandas.core.series import nargsort
+
 # dudt = f(t,u)
 # t in [t0, tf]
 # u(t0) = u0
@@ -192,7 +195,7 @@ def main():
     #df = pd.read_excel(writer, index_col=0) # Read in catalog
 
     # Write to the catalog
-    colList = ["Method", "CPU Global Error", "CPU Time (s)"]
+    colList = ["Method", "n", "CPU Global Error", "CPU Time (s)"]
     
     labRk2 = np.full(nNum, "RK2")
     labRk4 = np.full(nNum, "RK4")
@@ -201,10 +204,11 @@ def main():
     rowNames = np.concatenate((labRk2, labRk4, labForEuler))
     errors = np.concatenate((globErrRk2CpuArr, globErrRk4CpuArr, globErrForEulerCpuArr))
     times = np.concatenate((tRk2Cpu, tRk4Cpu, tForEulerCpu))
+    nTot = np.concatenate((nArr, nArr, NumpyArrayT))
     #gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
     #speedup = cpuTimes / gpuTimes
 
-    data = np.stack((rowNames, errors, times), axis=-1)
+    data = np.stack((rowNames, nTot, errors, times), axis=-1)
     print(data)
 
     df = pd.DataFrame(data,columns=colList)
