@@ -152,6 +152,9 @@ def main():
     plt.plot(globErrRk4CpuArr, hArr)
     plt.plot(globErrForEulerCpuArr, hArr)
 
+    plt.xscale("log")
+    plt.yscale("log")
+
     plt.savefig("cpuPlots1.png")
 
     # Plot GPU graphs
@@ -160,6 +163,9 @@ def main():
     plt.plot(globErrRk4CpuArr, hArr)
     plt.plot(globErrForEulerCpuArr, hArr)
 
+    plt.xscale("log")
+    plt.yscale("log")
+    
     plt.savefig("cpuPlots2.png")
 
     writer = pd.ExcelWriter(fname, engine='openpyxl', mode='a')
