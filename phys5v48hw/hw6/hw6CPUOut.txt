@@ -1,22 +1,10 @@
-print(tRk2Cpu): 0.0011928050080314279
-print(tRk4Cpu): 0.000303516979329288
-print(tForEulerCpu): 7.306493353098631e-05
-[['RK2' '0.0011928050080314279']
- ['RK4' '0.000303516979329288']
- ['Forward Euler' '7.306493353098631e-05']]
-Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 184, in <module>
-    main()
-    ~~~~^^
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 180, in main
-    df.to_excel(excel_writer=fname, columns=colList, engine='openpyxl')
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/pandas/core/generic.py", line 2300, in to_excel
-    formatter = ExcelFormatter(
-        df,
-    ...<8 lines>...
-        autofilter=autofilter,
-    )
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/pandas/io/formats/excel.py", line 570, in __init__
-    raise KeyError("passes columns are not ALL present dataframe")
-KeyError: 'passes columns are not ALL present dataframe'
+print(tRk2Cpu): 0.0015572579577565193
+print(tRk4Cpu): 9.390106424689293e-05
+print(tForEulerCpu): 2.4950015358626842e-05
+[['RK2' '0.0015572579577565193']
+ ['RK4' '9.390106424689293e-05']
+ ['Forward Euler' '2.4950015358626842e-05']]
+          Method            CPU Time (s)
+0            RK2   0.0015572579577565193
+1            RK4   9.390106424689293e-05
+2  Forward Euler  2.4950015358626842e-05
