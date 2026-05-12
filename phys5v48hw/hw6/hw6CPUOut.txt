@@ -1,11 +1,10 @@
-print(tRk2Cpu): 0.0019444909412413836
-print(tRk4Cpu): 0.00030375400092452765
-print(tForEulerCpu): 7.18490919098258e-05
+print(tRk2Cpu): 0.0018289190484210849
+print(tRk4Cpu): 9.158393368124962e-05
+print(tForEulerCpu): 2.2576074115931988e-05
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 184, in <module>
     main()
     ~~~~^^
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 175, in main
-    data = np.concatenate(rowName, cpuTimes)
-                          ^^^^^^^
-NameError: name 'rowName' is not defined. Did you mean: 'rowNames'?
+    data = np.concatenate(rowNames, cpuTimes)
+TypeError: only integer scalar arrays can be converted to a scalar index
