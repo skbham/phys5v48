@@ -1,8 +1,9 @@
-print(tRk2Cpu): 0.0014248730149120092
-print(tRk4Cpu): 0.00030109204817563295
-print(tForEulerCpu): 7.133895996958017e-05
-['RK2' 'RK4' 'Forward Euler' '0.0014248730149120092'
- '0.00030109204817563295' '7.133895996958017e-05']
+print(tRk2Cpu): 0.0011928050080314279
+print(tRk4Cpu): 0.000303516979329288
+print(tForEulerCpu): 7.306493353098631e-05
+[['RK2' '0.0011928050080314279']
+ ['RK4' '0.000303516979329288']
+ ['Forward Euler' '7.306493353098631e-05']]
 Traceback (most recent call last):
   File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainCPU.py", line 184, in <module>
     main()
