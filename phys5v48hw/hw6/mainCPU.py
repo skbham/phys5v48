@@ -174,6 +174,7 @@ def main():
     plt.legend()
 
     plt.savefig("cpuPlots1.png")
+    plt.close()
 
     # Runtime plots
     plt.plot(tRk2Cpu, hArr, label="RK2")
