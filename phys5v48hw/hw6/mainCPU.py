@@ -7,6 +7,7 @@
 # Implicit TRBDF2 method
 
 #from calendar import c
+from copy import Error
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -109,45 +110,53 @@ def main():
     globErrRk4CpuArr = np.zeros(nNum) 
     globErrForEulerCpuArr = np.zeros(nNum)
     
+    tRk2Cpu = np.zeros(nNum)
+    tRk4Cpu = np.zeros(nNum)
+    tForEulerCpu = np.zeros(nNum)
+
     fname = "hw6CPUData.xlsx"
 
     # Run CPU implementations
 
     # Run RK2 on CPU
-    start = perf_counter() # Start timer
     for i in range(0, nNum):
 
+        start = perf_counter() # Start timer
         yRk2CpuArr[i] = rk2(y, dydt, h=hArr[i])
+        end = perf_counter() # Stop timer
+        tRk2Cpu[i] = end - start # Calculate time
+
         globErrRk2CpuArr[i] = np.abs(yRk2CpuArr[i] - np.exp(-1))
 
-    end = perf_counter() # Stop timer
-    tRk2Cpu = end - start # Calculate time
-    print("print(tRk2Cpu): " + str(tRk2Cpu))
+    #print("print(tRk2Cpu): " + str(tRk2Cpu))
 
     # Run RK4 on CPU
-    start = perf_counter() # Start timer
     for i in range(0, nNum):
 
+        start = perf_counter() # Start timer
         yRk4CpuArr[i] = rk4(y, dydt, h=hArr[i])
+        end = perf_counter() # Stop timer
+        tRk4Cpu[i] = end - start # Calculate time
+
         globErrRk4CpuArr[i] = np.abs(yRk4CpuArr[i] - np.exp(-1))
 
-    end = perf_counter() # Stop timer
-    tRk4Cpu = end - start # Calculate time
-    print("print(tRk4Cpu): " + str(tRk4Cpu))
+    #print("print(tRk4Cpu): " + str(tRk4Cpu))
 
     # Run Forward Euler on CPU
-    start = perf_counter() # Start timer
     for i in range(0, nNum):
 
+        start = perf_counter() # Start timer
         yForEulerCpuArr[i] = forEuler(y, dydt, h=hArr[i])
+        end = perf_counter() # Stop timer
+        tForEulerCpu[i] = end - start # Calculate time
+
         globErrForEulerCpuArr[i] = np.abs(yForEulerCpuArr[i] - np.exp(-1))
 
-    end = perf_counter() # Stop timer
-    tForEulerCpu = end - start # Calculate time
-    print("print(tForEulerCpu): " + str(tForEulerCpu))
+    #print("print(tForEulerCpu): " + str(tForEulerCpu))
 
     # Plot CPU graphs
-    #plt.figure()
+
+    # Error plots
     plt.plot(globErrRk2CpuArr, hArr, label="RK2")
     plt.plot(globErrRk4CpuArr, hArr, label="RK4")
     plt.plot(globErrForEulerCpuArr, hArr, label="Forward Euler")
@@ -163,17 +172,39 @@ def main():
 
     plt.savefig("cpuPlots1.png")
 
+    # Runtime plots
+    plt.plot(tRk2Cpu, hArr, label="RK2")
+    plt.plot(tRk4Cpu, hArr, label="RK4")
+    plt.plot(tForEulerCpu, hArr, label="Forward Euler")
+
+    plt.xscale("log")
+    plt.yscale("log")
+
+    plt.title("Runtime Vs. Step Size")
+    plt.xlabel("Step Size")
+    plt.ylabel("Runtime")
+
+    plt.legend()
+
+    plt.savefig("cpuPlots2.png")
+
     writer = pd.ExcelWriter(fname, engine='openpyxl', mode='a')
     #df = pd.read_excel(writer, index_col=0) # Read in catalog
 
     # Write to the catalog
-    colList = ["Method", "CPU Time (s)"]
-    rowNames = np.array(["RK2", "RK4", "Forward Euler"])
-    cpuTimes = np.array([tRk2Cpu, tRk4Cpu, tForEulerCpu])
+    colList = ["Method", "CPU Global Error", "CPU Time (s)"]
+    
+    labRk2 = np.full(nNum, "RK2")
+    labRk4 = np.full(nNum, "RK4")
+    labForEuler = np.full(nNum, "Forward Euler")
+
+    rowNames = np.concatenate((labRk2, labRk4, labForEuler))
+    errors = np.concatenate((globErrRk2CpuArr, globErrRk4CpuArr, globErrForEulerCpuArr))
+    times = np.concatenate((tRk2Cpu, tRk4Cpu, tForEulerCpu))
     #gpuTimes = np.array([tRk2Gpu, tRk4Gpu, tForEulerGpu])
     #speedup = cpuTimes / gpuTimes
 
-    data = np.stack((rowNames, cpuTimes), axis=-1)
+    data = np.stack((rowNames, errors, times), axis=-1)
     print(data)
 
     df = pd.DataFrame(data,columns=colList)
