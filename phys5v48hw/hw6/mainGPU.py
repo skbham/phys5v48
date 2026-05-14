@@ -89,8 +89,11 @@ def forEuler(y, dydt, h=0.01):
 def main():
 
     nArr = cp.array([4,5,6,7,8,9,10])
-    hArr = cp.array(2.0 ** (-nArr))
     nNum = len(nArr)
+    hArr = cp.zeros(nNum) 
+
+    for i in range(nNum):
+        hArr[i] = array(2.0 ** (-nArr[i]))
 
     yRk2Arr = cp.zeros(nNum)
     yRk4Arr = cp.zeros(nNum)
