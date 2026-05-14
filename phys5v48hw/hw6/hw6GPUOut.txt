@@ -1,36 +1,40 @@
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 210, in <module>
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 786, in compile
+    nvrtc.compileProgram(self.ptr, options)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "cupy_backends/cuda/libs/nvrtc.pyx", line 125, in cupy_backends.cuda.libs.nvrtc.compileProgram
+  File "cupy_backends/cuda/libs/nvrtc.pyx", line 138, in cupy_backends.cuda.libs.nvrtc.compileProgram
+  File "cupy_backends/cuda/libs/nvrtc.pyx", line 53, in cupy_backends.cuda.libs.nvrtc.check_status
+cupy_backends.cuda.libs.nvrtc.NVRTCError: NVRTC_ERROR_INVALID_OPTION (5)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 208, in <module>
     main()
     ~~~~^^
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 151, in main
-    plt.plot(hArr, globErrRk2Arr, label="RK2")
-    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/pyplot.py", line 3838, in plot
-    return gca().plot(
-           ~~~~~~~~~~^
-        *args,
-        ^^^^^^
-    ...<3 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_axes.py", line 1779, in plot
-    self.add_line(line)
-    ~~~~~~~~~~~~~^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 2417, in add_line
-    self._update_line_limits(line)
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 2440, in _update_line_limits
-    path = line.get_path()
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/lines.py", line 1052, in get_path
-    self.recache()
-    ~~~~~~~~~~~~^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/lines.py", line 689, in recache
-    x = _to_unmasked_float_array(xconv).ravel()
-        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/matplotlib/cbook.py", line 1355, in _to_unmasked_float_array
-    return np.asarray(x, float)
-           ~~~~~~~~~~^^^^^^^^^^
-  File "cupy/_core/core.pyx", line 1699, in cupy._core.core._ndarray_base.__array__
-TypeError: Implicit conversion to a NumPy array is not allowed. Please use `.get()` to construct a NumPy array explicitly.
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 92, in main
+    hArr = cp.array(2.0 ** (-nArr))
+                            ^^^^^
+  File "cupy/_core/core.pyx", line 1469, in cupy._core.core._ndarray_base.__neg__
+  File "cupy/_core/_kernel.pyx", line 1380, in cupy._core._kernel.ufunc.__call__
+  File "cupy/_core/_kernel.pyx", line 1407, in cupy._core._kernel.ufunc._get_ufunc_kernel
+  File "cupy/_core/_kernel.pyx", line 1077, in cupy._core._kernel._get_ufunc_kernel
+  File "cupy/_core/_kernel.pyx", line 103, in cupy._core._kernel._get_simple_elementwise_kernel
+  File "cupy/_core/_kernel.pyx", line 91, in cupy._core._kernel._get_simple_elementwise_kernel_from_code
+  File "cupy/_core/core.pyx", line 2552, in cupy._core.core.compile_with_cache
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 566, in _compile_module_with_cache
+    return _compile_with_cache_cuda(
+        source, options, arch, cache_dir, extra_source, backend,
+        enable_cooperative_groups, name_expressions, log_stream,
+        cache_in_memory, jitify, to_ltoir)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 618, in _compile_with_cache_cuda
+    base = _preprocess('', options, arch, backend)
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 503, in _preprocess
+    result, _ = prog.compile(options)
+                ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/skb190000/miniforge3/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 805, in compile
+    raise CompileException(log, self.src, self.name, options,
+                           'nvrtc' if not runtime.is_hip else 'hiprtc')
+cupy.cuda.compiler.CompileException: nvrtc: error: invalid value for --gpu-architecture (-arch)
+
