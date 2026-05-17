@@ -32,8 +32,7 @@ def rk2(y, dydt, h=0.01):
     tn = 0
     yn = y(tn)
 
-    print(1/h)
-    stepNum = int(1/h)
+    stepNum = int(cp.divide(1,h))
 
     for i in range(0, stepNum):
 
