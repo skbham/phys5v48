@@ -93,7 +93,7 @@ def main():
     hArr = cp.zeros(nNum) 
 
     for i in range(nNum):
-        hArr[i] = array(2.0 ** (-nArr[i]))
+        hArr[i] = 2.0 ** (-nArr[i])
 
     yRk2Arr = cp.zeros(nNum)
     yRk4Arr = cp.zeros(nNum)
