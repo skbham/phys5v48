@@ -7,12 +7,13 @@
 # Implicit TRBDF2 method
 
 import matplotlib.pyplot as plt
+import math
 import cupy as cp
 import pandas as pd
 from time import perf_counter
 
 def y(t):
-    return 1 / cp.exp(t)
+    return math.exp(-t)
 
 def dydt(t, y):
     return - y
