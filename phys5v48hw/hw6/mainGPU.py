@@ -90,10 +90,12 @@ def main():
 
     nArr = cp.array([4,5,6,7,8,9,10])
     nNum = len(nArr)
-    hArr = cp.zeros(nNum) 
+    #hArr = cp.zeros(nNum) 
+    hArr = cp.array([0.0625, 0.03125, 0.015625, 0.0078125,
+                     0.00390625, 0.001953125, 0.0009765625])
 
-    for i in range(nNum):
-        hArr[i] = 2.0 ** (-nArr[i])
+    #for i in range(nNum):
+    #    hArr[i] = 2.0 ** (-nArr[i])
 
     yRk2Arr = cp.zeros(nNum)
     yRk4Arr = cp.zeros(nNum)
