@@ -12,7 +12,7 @@ import pandas as pd
 from time import perf_counter
 
 def y(t):
-    return cp.exp(-t)
+    return 1 / cp.exp(t)
 
 def dydt(t, y):
     return - y
