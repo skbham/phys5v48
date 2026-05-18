@@ -10,13 +10,15 @@ cupy_backends.cuda.libs.nvrtc.NVRTCError: NVRTC_ERROR_INVALID_OPTION (5)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 208, in <module>
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 214, in <module>
     main()
     ~~~~^^
-  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 92, in main
-    hArr = cp.array(2.0 ** (-nArr))
-                            ^^^^^
-  File "cupy/_core/core.pyx", line 1469, in cupy._core.core._ndarray_base.__neg__
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 120, in main
+    yRk2Arr[i] = rk2(y, dydt, h=hArr[i])
+                 ~~~^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/ganymede2/skb190000/scripts/hpc/phys5v48/phys5v48hw/hw6/mainGPU.py", line 35, in rk2
+    stepNum = int(cp.divide(1,h))
+                  ~~~~~~~~~^^^^^
   File "cupy/_core/_kernel.pyx", line 1380, in cupy._core._kernel.ufunc.__call__
   File "cupy/_core/_kernel.pyx", line 1407, in cupy._core._kernel.ufunc._get_ufunc_kernel
   File "cupy/_core/_kernel.pyx", line 1077, in cupy._core._kernel._get_ufunc_kernel
